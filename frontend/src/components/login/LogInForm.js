@@ -47,7 +47,7 @@ const LogInForm = ({ navigate }) => {
           <input placeholder='Enter your password' id="password" className="form-field" type='password' value={ password } onChange={handlePasswordChange} />
           <input id='submit' className='signup-submit-btn' type="submit" value="Login" /> 
       </form>
-    
+      {errorMessage && <p className="signup-error-message">{errorMessage}</p>}
     </>
   );
 }

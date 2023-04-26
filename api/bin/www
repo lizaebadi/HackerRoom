@@ -13,14 +13,14 @@ var mongoose = require("mongoose");
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || "8888");
+var port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 
 /**
  * Connect to MongoDB
  **/
-
-var mongoDbUrl = process.env.MONGODB_URL || "mongodb://1.0.0.0/escape";
+var mongoDbUrl = process.env.MONGODB_URL || "mongodb://0.0.0.0/escape";
+console.log(mongoDbUrl)
 mongoose.connect(mongoDbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

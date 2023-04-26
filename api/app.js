@@ -6,6 +6,7 @@ const JWT = require("jsonwebtoken");
 const cors = require("cors");
 
 const usersRouter = require("./routes/users");
+const tokensRouter = require("./routes/tokens");
 
 
 const app = express();
