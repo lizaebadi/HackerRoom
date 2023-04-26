@@ -11,8 +11,10 @@ import SignUpForm from '../../../../../acebook-team-fire/frontend/src/components
 function App() {
   return (
     <Routes>
-    <Route path='/'  element={<SignUpForm navigate={ useNavigate() } />}/>
-  </Routes>
+      <Route path='/'  element={<Navigate to="/signup" />}/>
+      <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
+      <Route path='/login'  element={<LoginForm  navigate={ useNavigate() }/>}/>
+    </Routes>
   );
 }
 
