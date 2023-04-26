@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   useNavigate,
@@ -6,14 +5,15 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-import SignUpForm from '../../../../../acebook-team-fire/frontend/src/components/user/SignUpForm';
+import SignUpForm from '../signup/SignUpForm';
+import LogInForm from '../login/LogInForm';
 
 function App() {
   return (
     <Routes>
       <Route path='/'  element={<Navigate to="/signup" />}/>
       <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
-      <Route path='/login'  element={<LoginForm  navigate={ useNavigate() }/>}/>
+      <Route path='/login'  element={<LogInForm  navigate={ useNavigate() }/>}/>
     </Routes>
   );
 }
