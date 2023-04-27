@@ -25,6 +25,13 @@ const MainGame = ({ }) => {
           this.maxSpeed = 4;
           this.image = document.getElementById('hero');
           this.isMoving = false;
+
+          window.addEventListener('keydown', e => {
+            this.game.lastKey = 'P' + e.key;
+          });
+          window.addEventListener('keyup', e => {
+            this.game.lastKey = 'R' + e.key;
+          });
         }
         draw(context){
           // context.strokeRect(this.x ,this.y , this.width, this.height);
@@ -36,13 +43,6 @@ const MainGame = ({ }) => {
         }
 
         playerMovement(){
-          //input
-          window.addEventListener('keydown', e => {
-            this.game.lastKey = 'P' + e.key;
-          });
-          window.addEventListener('keyup', e => {
-            this.game.lastKey = 'R' + e.key;
-          });
           //player movement
           switch(this.game.lastKey) {
           case 'PArrowLeft':
@@ -95,21 +95,7 @@ const MainGame = ({ }) => {
           }
         }
 
-        
-
-        update(items){
-          // collision logic
-          items.forEach(item => {
-            if (item.x < this.x + this.width &&
-                item.x + item.width > this.x &&
-                item.y < this.y + this.height &&
-                item.y + item.height > this.y
-            ){console.log('collision')}
-          });
-          this.playerMovement()
-          
-          
-    
+        wallBoundaries(){
           //setting horizontal bouandaries on the screen
           if (this.x<45){
             this.x = 45;
@@ -135,6 +121,28 @@ const MainGame = ({ }) => {
           } else if (this.y > this.game.bottomMargin - this.height) {
             this.y = this.game.bottomMargin - this.height;
           }
+        }
+
+        // NOTE TO TEAM: this function was too long and a lot of
+        // the logic was better off in its own function.
+        // tomorrow (friday), we should get rid of this function
+        // entirely and have better seperation of concerns. Also, we should work on 
+        // we should work on testing, seperating the classes into files,  
+        // and adding more objects to interact with.
+  
+        update(items){
+          // collision logic
+          items.forEach(item => {
+            if (item.x < this.x + this.width &&
+                item.x + item.width > this.x &&
+                item.y < this.y + this.height &&
+                item.y + item.height > this.y
+            ){console.log('collision')}
+          });
+
+          this.playerMovement()
+          this.wallBoundaries()
+
           // sprite animation
           if (this.isMoving) {
             if (this.frameX < this.maxFrame) this.frameX++;
