@@ -46,6 +46,62 @@ const MainGame = ({ }) => {
           this.speedX = speedX;
           this.speedY = speedY;
         }
+
+        playerMovement(){
+          //player movement
+          switch(this.game.lastKey) {
+          case 'PArrowLeft':
+            this.setSpeed(-this.maxSpeed,0)
+            this.frameY = 1;
+            this.isMoving = true;
+            break;
+          case 'RArrowLeft':
+            this.setSpeed(0,0)
+            this.frameY = 1;
+            this.isMoving = false;
+            break;
+          case 'PArrowRight':
+            this.setSpeed(this.maxSpeed,0)
+            this.frameY = 2;
+            this.isMoving = true;
+            break;
+          case 'RArrowRight':
+            this.setSpeed(0,0)
+            this.frameY = 2;
+            this.isMoving = false;
+            break;
+          case 'PArrowUp':
+            this.setSpeed(0, -this.maxSpeed*0.6)
+            this.frameY = 3;
+            this.isMoving = true;
+            break;
+          case 'RArrowUp':
+            this.setSpeed(0,0)
+            this.frameY = 3;
+            this.isMoving = false;
+            break;
+          case 'PArrowDown':
+            this.setSpeed(0, this.maxSpeed*0.6)
+            this.frameY = 0;
+            this.isMoving = true;
+            break;
+          case 'RArrowDown':
+            this.setSpeed(0,0)
+            this.frameY = 0;
+            this.isMoving = false;
+            break;
+          default:
+            this.setSpeed(0,0)
+            this.isMoving = false;
+          }
+
+          if(!this.isMoving) {
+            this.frameX = 1;
+          }
+        }
+
+        
+
         update(items){
           // collision logic
           items.forEach(item => {
@@ -55,48 +111,7 @@ const MainGame = ({ }) => {
                 item.y + item.height > this.y
             ){console.log('collision')}
           });
-    
-          //player movement
-          if(this.game.lastKey == 'PArrowLeft'){
-            this.setSpeed(-this.maxSpeed,0)
-            this.frameY = 1;
-            this.isMoving = true;
-          } else if(this.game.lastKey == 'RArrowLeft'){
-            this.setSpeed(0,0)
-            this.frameY = 1;
-            this.isMoving = false;
-          } else if(this.game.lastKey == 'PArrowRight'){
-            this.setSpeed(this.maxSpeed,0)
-            this.frameY = 2;
-            this.isMoving = true;
-          }else if(this.game.lastKey == 'RArrowRight'){
-            this.setSpeed(0,0)
-            this.frameY = 2;
-            this.isMoving = false;
-          } else if(this.game.lastKey == 'PArrowUp'){
-            this.setSpeed(0, -this.maxSpeed*0.6)
-            this.frameY = 3;
-            this.isMoving = true;
-          }else if(this.game.lastKey == 'RArrowUp'){
-            this.setSpeed(0,0)
-            this.frameY = 3;
-            this.isMoving = false;
-          }else if(this.game.lastKey == 'PArrowDown'){
-            this.setSpeed(0, this.maxSpeed*0.6)
-            this.frameY = 0;
-            this.isMoving = true;
-          }else if(this.game.lastKey == 'RArrowDown'){
-            this.setSpeed(0,0)
-            this.frameY = 0;
-            this.isMoving = false;
-          } else{
-            this.setSpeed(0,0)
-            this.isMoving = false;
-          }
-    
-          if(!this.isMoving) {
-            this.frameX = 1;
-          }
+          this.playerMovement()
           
           
     
