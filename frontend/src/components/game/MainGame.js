@@ -8,18 +8,6 @@ const MainGame = ({ }) => {
       canvas.width =1092;
       canvas.height = 910;
     
-      class InputHandler {
-        constructor(game){
-          this.game = game;
-          window.addEventListener('keydown', e => {
-            this.game.lastKey = 'P' + e.key;
-          });
-          window.addEventListener('keyup', e => {
-            this.game.lastKey = 'R' + e.key;
-          });
-        }
-      }
-    
       class Hero {
         constructor(game){
           this.game = game;
@@ -48,6 +36,13 @@ const MainGame = ({ }) => {
         }
 
         playerMovement(){
+          //input
+          window.addEventListener('keydown', e => {
+            this.game.lastKey = 'P' + e.key;
+          });
+          window.addEventListener('keyup', e => {
+            this.game.lastKey = 'R' + e.key;
+          });
           //player movement
           switch(this.game.lastKey) {
           case 'PArrowLeft':
@@ -178,7 +173,6 @@ const MainGame = ({ }) => {
           this.bottomMargin = 860;
           this.rightMargin = 1045
           this.lastKey = undefined;
-          this.input = new InputHandler(this);
           this.hero = new Hero(this);
           // interactables become an array of objects that player can interact with
           this.interactables = [];
