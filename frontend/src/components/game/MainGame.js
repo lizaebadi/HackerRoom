@@ -98,14 +98,26 @@ const MainGame = ({ }) => {
             this.frameX = 1;
           }
           
-          this.x += this.speedX;
-          this.y += this.speedY;
+          
     
           //setting horizontal bouandaries on the screen
           if (this.x<45){
             this.x = 45;
           } else if (this.x > this.game.rightMargin - this.width){
             this.x =this.game.rightMargin - this.width;
+          }
+          // set diagonal boudaries for walls
+          // y = mx + b
+          const leftSlope = -1.056 * this.x + 462.72
+          const rightSlope = ((130/127) * this.x) - 660.48
+ 
+          if(!(this.y <= leftSlope) && !(this.y <= rightSlope)){
+            this.x += this.speedX;
+            this.y += this.speedY;
+             
+          } 
+          else {
+            this.y += 0.1
           }
           //setting vertical bouandaries on the scree 
           if (this.y <0 + this.game.topMargin){
@@ -144,7 +156,7 @@ const MainGame = ({ }) => {
       }
     
       class Game {
-        constructor(width, height ){
+        constructor(width, height){
           this.width= width;
           this.height=height;
           this.topMargin = 280;
