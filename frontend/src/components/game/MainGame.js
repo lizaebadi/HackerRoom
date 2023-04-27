@@ -3,7 +3,6 @@ import './MainGame.css';
 
 const MainGame = ({ }) => {
   useEffect(() => {
-    window.addEventListener('load', function(){
       const canvas = document.getElementById('canvas1');
       const ctx = canvas.getContext('2d');
       canvas.width =1092;
@@ -178,7 +177,6 @@ const MainGame = ({ }) => {
         requestAnimationFrame(animate);
       }
       animate(); 
-    });
 })
   
 
