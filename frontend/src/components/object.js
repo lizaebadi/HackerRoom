@@ -10,6 +10,14 @@ export default class Object {
     context.drawImage(this.image, this.positionX, this.positionY, this.imageWidth, this.imageHeight);
     context.strokeRect(this.positionX ,this.positionY , this.imageWidth, this.imageHeight);
   }
+
+  collision(hero){
+      if (hero.x < this.positionX + this.imageWidth &&
+          hero.x + hero.width > this.positionX &&
+          hero.y < this.positionY + this.imageHeight &&
+          hero.y + hero.height > this.positionY
+      ){console.log('collision')}
+  }
 }
 
 // class Bookshelf extends Object{

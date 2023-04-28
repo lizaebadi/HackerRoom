@@ -120,16 +120,7 @@ export default class Hero {
   // we should work on testing, seperating the classes into files,  
   // and adding more objects to interact with.
 
-  update(items){
-    // collision logic
-    items.forEach(item => {
-      if (item.x < this.x + this.width &&
-          item.x + item.width > this.x &&
-          item.y < this.y + this.height &&
-          item.y + item.height > this.y
-      ){console.log('collision')}
-    });
-
+  animate(){
     this.playerMovement()
     this.wallBoundaries()
 

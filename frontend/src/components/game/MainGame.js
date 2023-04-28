@@ -20,7 +20,8 @@ const MainGame = ({ }) => {
         // game.render(ctx);
         bookshelf.draw(ctx)
         hero.draw(ctx)
-        hero.update([bookshelf])
+        bookshelf.collision(hero)
+        hero.animate()
         requestAnimationFrame(animate);
       }
       animate(); 
