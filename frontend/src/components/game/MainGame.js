@@ -186,7 +186,7 @@ const MainGame = ({ }) => {
       <canvas id="canvas1"></canvas>
     </div>
     <img src = "/$MorganB.png" alt="hero" id="hero"></img>
-    <img src = "/book shelf.png" alt="bookshelf" id="bookshelf"></img>
+    <img src = "/bookshelf.png" alt="bookshelf" id="bookshelf"></img>
     </>
   )
 }
