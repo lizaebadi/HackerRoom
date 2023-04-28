@@ -6,3 +6,45 @@
   padding:0;
   margin:0;
 }
+
+#login-form{
+  width: 70%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 5px;
+  padding: 2rem 0;
+  margin: 3rem;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow-settings);  
+}
+
+#login-submit-btn{
+  cursor: pointer;
+  border: 1px transparent solid;
+  border-radius: 50px;
+  background-color: rgb(229, 49, 160);
+
+  color: var(--text-white);
+  font-weight: 900;
+  font-size: 2rem;
+
+  width: 15rem;
+  height: 5.5rem;
+  transition: all .15s ease-in-out;
+  margin: 3rem 0;
+
+}
+
+#login-submit-btn:hover {
+  background-color: rgb(74, 198, 203);
+  transform: scale(1.1);
+  transition: all .15s ease-in-out;
+}
+
+#login-submit-btn:active {
+  transform: translateY(1px);
+}

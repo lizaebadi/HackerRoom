@@ -42,12 +42,12 @@ const LogInForm = ({ navigate }) => {
     <div id='login-container'>
       <h1>Escape Room</h1>
       <h1>Login</h1>
-      <form id='signup-form' onSubmit={handleSubmit}>
+      <form id='login-form' onSubmit={handleSubmit}>
           <input placeholder='Enter your email address' id="email" className="form-field" type='text' value={ email } onChange={handleEmailChange} />
           <input placeholder='Enter your password' id="password" className="form-field" type='password' value={ password } onChange={handlePasswordChange} />
-          <input id='submit' className='signup-submit-btn' type="submit" value="Login" /> 
+          <input id='login-submit-btn' className='btn' type="submit" value="Login" /> 
       </form>
-      {errorMessage && <p className="signup-error-message">{errorMessage}</p>}
+      {errorMessage && <p className="login-error-message">{errorMessage}</p>}
     </div>
   );
 }
