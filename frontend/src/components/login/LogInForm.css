@@ -1,0 +1,8 @@
+#login-container{
+  background-image: url('/public/img/cybercity2.gif');
+  background-size: cover;
+  
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
