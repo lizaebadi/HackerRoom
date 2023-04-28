@@ -99,7 +99,12 @@ export default class Hero {
       this.x += this.speedX;
       this.y += this.speedY;
     } 
-    else {
+
+    if(this.y <= rightSlope){
+      this.y += 0.3
+      this.x -= 0.3
+    }
+    if(this.y <= leftSlope){
       this.y += 0.3
       this.x += 0.3
     }

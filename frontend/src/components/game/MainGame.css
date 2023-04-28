@@ -30,6 +30,6 @@ canvas {
   background: url('/public/background.png')
 }
 
-#hero, #bookshelf, #server-big, #wall-computer, #desk, #wall-computer2 {
+#hero, #bookshelf, #server-big, #wall-computer, #desk, #wall-computer2, #wall-server, #table, #floor-server {
   display: none;
 }
