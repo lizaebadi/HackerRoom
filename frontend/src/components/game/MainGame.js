@@ -13,12 +13,14 @@ const MainGame = ({ }) => {
     
       const game = new GameArea(canvas.width, canvas.height);
       const hero = new Hero(game)
-      const bookshelf = new Object('bookshelf', 96, 120, 300, 20)
+      const bookshelf = new Object('bookshelf', 96, 120, 300, 230)
+      const serverBig = new Object('server-big', 249, 156, 49, 500)
       
       function animate (){
         ctx.clearRect(0,0, canvas.width, canvas.height);
         // game.render(ctx);
         bookshelf.draw(ctx)
+        serverBig.draw(ctx)
         hero.draw(ctx)
         bookshelf.collision(hero)
         hero.animate()
@@ -34,7 +36,8 @@ const MainGame = ({ }) => {
       <canvas id="canvas1"></canvas>
     </div>
     <img src = "/$MorganB.png" alt="hero" id="hero"></img>
-    <img src = "/book shelf.png" alt="bookshelf" id="bookshelf"></img>
+    <img src = "/bookshelf.png" alt="bookshelf" id="bookshelf"></img>
+    <img src = "/server-big.png" alt="server-big" id="server-big"></img>
     </>
   )
 }
