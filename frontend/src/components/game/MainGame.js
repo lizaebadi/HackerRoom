@@ -13,7 +13,7 @@ const MainGame = ({ }) => {
     
       const game = new GameArea(canvas.width, canvas.height);
       const hero = new Hero(game)
-      const bookshelf = new Object('bookshelf', 32, 40, 300, 280)
+      const bookshelf = new Object('bookshelf', 96, 120, 300, 20)
       
       function animate (){
         ctx.clearRect(0,0, canvas.width, canvas.height);

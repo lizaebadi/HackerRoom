@@ -7,13 +7,13 @@ export default class Hero {
     this.frameX = 0;
     this.frameY = 0;
     this.maxFrame = 2; //number of frames per row within sprite sheet
-    this.width = this.spriteWidth;
-    this.height =  this.spriteHeight;
+    this.width = this.spriteWidth * 3;
+    this.height =  this.spriteHeight * 3;
     this.x = 300;
     this.y = 300;
     this.speedX = 0;
     this.speedY = 0;
-    this.maxSpeed = 4;
+    this.maxSpeed = 6;
     this.image = document.getElementById('hero');
     this.isMoving = false;
   }
@@ -93,14 +93,15 @@ export default class Hero {
     }
 
     // y = mx + b
-    const leftSlope = -1.056 * this.x + 462.72
+    const leftSlope = -1.6 * this.x + 450
     const rightSlope = ((130/127) * this.x) - 660.48
     if(!(this.y <= leftSlope) && !(this.y <= rightSlope)){
       this.x += this.speedX;
       this.y += this.speedY;
     } 
     else {
-      this.y += 0.1
+      this.y += 0.3
+      this.x += 0.3
     }
  
     if (this.y <0 + this.game.topMargin){

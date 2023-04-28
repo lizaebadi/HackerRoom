@@ -8,7 +8,7 @@ export default class Object {
   }
   draw(context){
     context.drawImage(this.image, this.positionX, this.positionY, this.imageWidth, this.imageHeight);
-    context.strokeRect(this.positionX ,this.positionY , this.imageWidth, this.imageHeight);
+    // context.strokeRect(this.positionX ,this.positionY , this.imageWidth, this.imageHeight);
   }
 
   collision(hero){
