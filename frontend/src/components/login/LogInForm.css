@@ -32,7 +32,7 @@
   border-radius: 50px;
   background-color: rgb(229, 49, 160);
 
-  color: var(--text-white);
+  color: #ffffff;
   font-weight: 900;
   font-size: 2rem;
 
@@ -44,7 +44,7 @@
 }
 
 #login-submit-btn:hover {
-  background-color: rgb(188, 246, 248);
+  background-color: #35bcfb;
   transform: scale(1.1);
   transition: all .15s ease-in-out;
 }
@@ -61,7 +61,7 @@
     0px 0px 20px #b393d3;
 }
 
-.form-field {
+.login-form-field {
   font-size: 1.8rem;
   width: 75%;
   height: 5rem;
@@ -72,12 +72,12 @@
  transition: all .1s ease-in-out;
 }
 
-.form-field:focus {
-  outline: #fff236 2px solid;
+.login-form-field:focus {
+  outline: #35bcfb 4px solid;
   transition: outline .1s ease-in-out;
 }
 
-.form-field:focus::placeholder {
+.login-form-field:focus::placeholder {
   color: rgb(186, 186, 186);
   transition: all .1s ease-in-out;
 }
