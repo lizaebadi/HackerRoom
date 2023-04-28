@@ -33,13 +33,13 @@ const LogInForm = ({ navigate }) => {
         setErrorMessage('Password is incorrect. Try again!');
     } else {
         let data = await response.json()
-        console.log(data)
-        console.log('Login Successful')
+        window.localStorage.setItem("token", data.token)
+        navigate('/');
     }
   }
 
   return (
-    <>
+    <div id='login-container'>
       <h1>Escape Room</h1>
       <h1>Login</h1>
       <form id='signup-form' onSubmit={handleSubmit}>
@@ -48,7 +48,7 @@ const LogInForm = ({ navigate }) => {
           <input id='submit' className='signup-submit-btn' type="submit" value="Login" /> 
       </form>
       {errorMessage && <p className="signup-error-message">{errorMessage}</p>}
-    </>
+    </div>
   );
 }
 

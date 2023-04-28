@@ -41,7 +41,7 @@ const SignUpForm = ({ navigate }) => {
   }
 
   return (
-    <>
+    <div id='signup-container'>
       <h1>Escape Room</h1>
       <h1>Signup</h1>
       <form id='signup-form' onSubmit={handleSubmit}>
@@ -50,8 +50,7 @@ const SignUpForm = ({ navigate }) => {
           <input placeholder="Password" id="password" className="form-field" type='password' value={password} onChange={handlePasswordChange} />
           <input id='submit' className='signup-submit-btn' type="submit" value="Sign up" />
       </form>
-    
-    </>
+    </div>
   );
 }
 
