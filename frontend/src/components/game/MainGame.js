@@ -19,11 +19,17 @@ const MainGame = ({ }) => {
       const hero = new Hero(game)
       const serverBig = new Object("server-big", 249, 156, 49, 500)
       const wallComputer = new Object("wall-computer", 108, 139, 70, 180)
-      
+      const desk = new Object("desk", 235, 117, 270, 275)
+      const bookshelf = new Object("bookshelf", 74, 148, 940, 265)
+      const wallComputer2 = new Object("wall-computer2", 58, 103, 850, 180)
+
       function animate (){
         ctx.clearRect(0,0, canvas.width, canvas.height);
         serverBig.render(ctx, hero)
         wallComputer.render(ctx, hero)
+        wallComputer2.render(ctx, hero)
+        desk.render(ctx, hero)
+        bookshelf.render(ctx, hero)
         hero.draw(ctx)
         hero.animate()
         requestAnimationFrame(animate);
@@ -40,6 +46,9 @@ const MainGame = ({ }) => {
     <img src="$MorganB.png" alt="hero" id="hero"/>
     <img src="server-big.png" alt="server-big" id="server-big"/>
     <img src="wall-computer.png" alt="wall-computer" id="wall-computer"/>
+    <img src="wall-computer2.png" alt="wall-computer2" id="wall-computer2"/>
+    <img src="desk.png" alt="desk" id="desk"/>
+    <img src="bookshelf.png" alt="bookshelf" id="bookshelf"/>
     
     </>
   )
