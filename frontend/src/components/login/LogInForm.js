@@ -45,7 +45,7 @@ const LogInForm = ({ navigate }) => {
           <h1 id='login-title'>Login</h1>
           <input placeholder='Enter your email address' id="email" className="login-form-field" type='text' value={ email } onChange={handleEmailChange} />
           <input placeholder='Enter your password' id="password" className="login-form-field" type='password' value={ password } onChange={handlePasswordChange} />
-          <input id='login-submit-btn' className='btn' type="submit" value="Login" /> 
+          <input id='login-submit-btn' className='btn' type="submit" value="Log in" /> 
           {errorMessage && <p id="login-error-message">{errorMessage}</p>}
           <p id='signup-prompt'>Don't have an account?  <a href="/signup" id='signup-link'>Sign up</a> </p>
       </form>
