@@ -25,3 +25,11 @@
   background-color: rgba(0,0,0,0.3);
   box-shadow: 0px 0px 3px rgb(175, 175, 175);  
 }
+
+#signup-title{
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0px 0px 5px #35bcfb, 0px 0px 10px #35bcfb, 0px 0px 10px #35bcfb,
+    0px 0px 20px #35bcfb;
+}
