@@ -1,6 +1,6 @@
 export default class Object {
   constructor(elementName, width, height, x, y){
-    this.image= document.getElementById(elementName)
+    this.image = document.getElementById(elementName)
     this.imageWidth = width
     this.imageHeight= height
     this.positionX = x
@@ -17,5 +17,10 @@ export default class Object {
           hero.y < this.positionY + this.imageHeight &&
           hero.y + hero.height > this.positionY
       ){console.log('collision')}
+  }
+
+  render(context, hero) {
+    this.draw(context)
+    this.collision(hero)
   }
 }
