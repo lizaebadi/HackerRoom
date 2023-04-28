@@ -71,6 +71,10 @@
   text-decoration: none
 }
 
+#login-error-message{
+  color: #da0a0a
+}
+
 .login-form-field {
   font-size: 1.8rem;
   width: 75%;

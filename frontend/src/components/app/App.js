@@ -12,7 +12,8 @@ import MainGame from '../game/MainGame';
 function App() {
   return (
     <Routes>
-      <Route path='/'  element={<MainGame />}/>
+      <Route path='/' element={<Navigate to="/login" />}/>
+      <Route path='/game'  element={<MainGame />}/>
       <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
       <Route path='/login'  element={<LogInForm  navigate={ useNavigate() }/>}/>
     </Routes>
