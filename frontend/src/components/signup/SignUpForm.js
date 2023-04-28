@@ -43,7 +43,7 @@ const SignUpForm = ({ navigate }) => {
   return (
     <div id='signup-container'>
       <form id='signup-form' onSubmit={handleSubmit}>
-          <h1>Signup</h1>
+          <h1 id='signup-title'>Signup</h1>
           <input placeholder="Username" id="username" className="form-field" type="text" value={ username } onChange={handleUsernameChange} />
           <input placeholder="Email" id="email" className="form-field"type='text' value={ email } onChange={handleEmailChange} />
           <input placeholder="Password" id="password" className="form-field" type='password' value={password} onChange={handlePasswordChange} />
