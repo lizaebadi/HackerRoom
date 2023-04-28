@@ -19,15 +19,3 @@ export default class Object {
       ){console.log('collision')}
   }
 }
-
-// class Bookshelf extends Object{
-//   constructor(game){
-//     super(game);
-//     this.game = game;
-//     this.image= document.getElementById('bookshelf')
-//     this.imageWidth= this.width = 32 
-//      = 40
-//     this.x=300;
-//     this.y=280;
-//   }
-// }

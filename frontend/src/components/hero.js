@@ -1,6 +1,7 @@
 export default class Hero {
   constructor(game){
-    this.game = game;
+    this.game = game
+    
     this.spriteWidth = 18; // width of sprite sheet/ num of collumns
     this.spriteHeight = 32;
     this.frameX = 0;
@@ -15,13 +16,6 @@ export default class Hero {
     this.maxSpeed = 4;
     this.image = document.getElementById('hero');
     this.isMoving = false;
-
-    window.addEventListener('keydown', e => {
-      this.game.lastKey = 'P' + e.key;
-    });
-    window.addEventListener('keyup', e => {
-      this.game.lastKey = 'R' + e.key;
-    });
   }
   draw(context){
     // context.strokeRect(this.x ,this.y , this.width, this.height);
@@ -33,7 +27,13 @@ export default class Hero {
   }
 
   playerMovement(){
-    //player movement
+    window.addEventListener('keydown', e => {
+      this.game.lastKey = 'P' + e.key;
+    });
+    window.addEventListener('keyup', e => {
+      this.game.lastKey = 'R' + e.key;
+    });
+
     switch(this.game.lastKey) {
     case 'PArrowLeft':
       this.setSpeed(-this.maxSpeed,0)
@@ -86,26 +86,23 @@ export default class Hero {
   }
 
   wallBoundaries(){
-    //setting horizontal bouandaries on the screen
     if (this.x<45){
       this.x = 45;
     } else if (this.x > this.game.rightMargin - this.width){
       this.x =this.game.rightMargin - this.width;
     }
-    // set diagonal boudaries for walls
+
     // y = mx + b
     const leftSlope = -1.056 * this.x + 462.72
     const rightSlope = ((130/127) * this.x) - 660.48
-
     if(!(this.y <= leftSlope) && !(this.y <= rightSlope)){
       this.x += this.speedX;
       this.y += this.speedY;
-       
     } 
     else {
       this.y += 0.1
     }
-    //setting vertical bouandaries on the scree 
+ 
     if (this.y <0 + this.game.topMargin){
       this.y = this.game.topMargin;
     } else if (this.y > this.game.bottomMargin - this.height) {
@@ -113,18 +110,11 @@ export default class Hero {
     }
   }
 
-  // NOTE TO TEAM: this function was too long and a lot of
-  // the logic was better off in its own function.
-  // tomorrow (friday), we should get rid of this function
-  // entirely and have better seperation of concerns. Also, we should work on 
-  // we should work on testing, seperating the classes into files,  
-  // and adding more objects to interact with.
 
   animate(){
     this.playerMovement()
     this.wallBoundaries()
 
-    // sprite animation
     if (this.isMoving) {
       if (this.frameX < this.maxFrame) this.frameX++;
       else this.frameX = 0;

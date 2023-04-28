@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Game from '../game.js'
+import GameArea from '../game.js'
 import Hero from '../hero.js'
 import Object from '../object.js'
 import './MainGame.css';
@@ -11,7 +11,7 @@ const MainGame = ({ }) => {
       canvas.width =1092;
       canvas.height = 910;
     
-      const game = new Game(canvas.width, canvas.height);
+      const game = new GameArea(canvas.width, canvas.height);
       const hero = new Hero(game)
       const bookshelf = new Object('bookshelf', 32, 40, 300, 280)
       
