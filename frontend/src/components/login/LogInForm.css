@@ -8,7 +8,11 @@
 }
 
 #login-form{
-  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  width: 50%;
   height: 30rem;
   display: flex;
   flex-direction: column;
@@ -61,7 +65,7 @@
 }
 
 .form-field:focus {
-  outline: #fff236 5px solid;
+  outline: #fff236 2px solid;
   transition: outline .1s ease-in-out;
 }
 
