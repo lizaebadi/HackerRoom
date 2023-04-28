@@ -181,13 +181,13 @@ const MainGame = ({ }) => {
   
 
   return(
-    <>
+    <div id='game-container'>
     <div id="wrapper">
       <canvas id="canvas1"></canvas>
     </div>
     <img src = "/$MorganB.png" alt="hero" id="hero"></img>
     <img src = "/bookshelf.png" alt="bookshelf" id="bookshelf"></img>
-    </>
+    </div>
   )
 }
 
