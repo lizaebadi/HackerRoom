@@ -35,23 +35,22 @@ const SignUpForm = ({ navigate }) => {
         if(response.status === 201) {
           navigate('/login')
         } else {
-          navigate('/')
+          navigate('/signup')
         }
       })
   }
 
   return (
-    <>
-      <h1>Escape Room</h1>
-      <h1>Signup</h1>
+    <div id='signup-container'>
       <form id='signup-form' onSubmit={handleSubmit}>
-          <input placeholder="Username" id="username" className="form-field" type="text" value={ username } onChange={handleUsernameChange} />
-          <input placeholder="Email" id="email" className="form-field"type='text' value={ email } onChange={handleEmailChange} />
-          <input placeholder="Password" id="password" className="form-field" type='password' value={password} onChange={handlePasswordChange} />
-          <input id='submit' className='signup-submit-btn' type="submit" value="Sign up" />
+          <h1 id='signup-title'>Sign up</h1>
+          <input placeholder="Username" id="username" className="signup-form-field" type="text" value={ username } onChange={handleUsernameChange} />
+          <input placeholder="Email" id="email" className="signup-form-field"type='text' value={ email } onChange={handleEmailChange} />
+          <input placeholder="Password" id="password" className="signup-form-field" type='password' value={password} onChange={handlePasswordChange} />
+          <input id='signup-submit-btn' className='btn' type="submit" value="Sign up" />
+          <p id='login-prompt'>Already have an account?  <a href="/login" id='login-link'>Log in</a> </p>
       </form>
-    
-    </>
+    </div>
   );
 }
 

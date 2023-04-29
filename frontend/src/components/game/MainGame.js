@@ -45,7 +45,7 @@ const MainGame = ({ }) => {
   
 
   return(
-    <>
+    <div id='game-container'>
     <div id="wrapper">
       <canvas ref={canvasRef} id="canvas1"></canvas>
     </div>
@@ -59,7 +59,7 @@ const MainGame = ({ }) => {
     <img src="wall-server.png" alt="wall-server" id="wall-server"/>
     <img src="floor-server.png" alt="floor-server" id="floor-server"/>
     
-    </>
+    </div>
   )
 }
 

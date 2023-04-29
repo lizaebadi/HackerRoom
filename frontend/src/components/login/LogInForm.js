@@ -33,22 +33,24 @@ const LogInForm = ({ navigate }) => {
         setErrorMessage('Password is incorrect. Try again!');
     } else {
         let data = await response.json()
-        console.log(data)
-        console.log('Login Successful')
+        window.localStorage.setItem("token", data.token)
+        navigate('/game');
     }
   }
 
   return (
-    <>
-      <h1>Escape Room</h1>
-      <h1>Login</h1>
-      <form id='signup-form' onSubmit={handleSubmit}>
-          <input placeholder='Enter your email address' id="email" className="form-field" type='text' value={ email } onChange={handleEmailChange} />
-          <input placeholder='Enter your password' id="password" className="form-field" type='password' value={ password } onChange={handlePasswordChange} />
-          <input id='submit' className='signup-submit-btn' type="submit" value="Login" /> 
+    <div id='login-container'>
+
+      <form id='login-form' onSubmit={handleSubmit}>
+          <h1 id='login-title'>Login</h1>
+          <input placeholder='Enter your email address' id="email" className="login-form-field" type='text' value={ email } onChange={handleEmailChange} />
+          <input placeholder='Enter your password' id="password" className="login-form-field" type='password' value={ password } onChange={handlePasswordChange} />
+          <input id='login-submit-btn' className='btn' type="submit" value="Log in" /> 
+          {errorMessage && <p id="login-error-message">{errorMessage}</p>}
+          <p id='signup-prompt'>Don't have an account?  <a href="/signup" id='signup-link'>Sign up</a> </p>
       </form>
-      {errorMessage && <p className="signup-error-message">{errorMessage}</p>}
-    </>
+      
+    </div>
   );
 }
 
