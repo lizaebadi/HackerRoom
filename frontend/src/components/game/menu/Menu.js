@@ -9,16 +9,16 @@ const Menu = ({ navigate }) => {
   }
   
   return (
-    <>
-      <div id='menu-container'>
-          <h1>Menu</h1>
+    <div id='menu-container'>
+      <div id='menu-list'>
+          <h1 id='menu-title'>Menu</h1>
           <ul className='menu-btn'>
             <li><button>Settings</button></li>
             <li><button onClick={logout}>Quit</button></li>
           </ul>
 
       </div>
-    </>
+    </div>
   );
 }
 

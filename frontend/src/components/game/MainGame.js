@@ -71,7 +71,9 @@ const MainGame = ({ navigate }) => {
       <img src="bookshelf.png" alt="bookshelf" id="bookshelf"/>
       <img src="wall-server.png" alt="wall-server" id="wall-server"/>
       <img src="floor-server.png" alt="floor-server" id="floor-server"/>
-      {showMenu && <Menu navigate={navigate} /> }
+      <div>
+        {showMenu && <Menu navigate={navigate} /> }
+      </div>
     </div>
   )
 }
