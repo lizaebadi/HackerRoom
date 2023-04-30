@@ -13,7 +13,8 @@ const Menu = ({ navigate }) => {
       <div id='menu-container'>
           <h1>Menu</h1>
           <ul>
-            <button className="menu-btn" onClick={logout}>Logout</button>
+            <li><button>Settings</button></li>
+            <li><button className="menu-btn" onClick={logout}>Quit</button></li>
           </ul>
 
       </div>
