@@ -29,9 +29,9 @@ const MainGame = ({ }) => {
         {obj: desk, x: 295, y: 240, width: 185, height: 60, down: true},
         {obj: bookshelf, x: 965, y:220, width: 0, height: 90, left: true},
         {obj: serverBig, x: 49, y: 520, width: 185, height: 0, down: true},
-        {obj: serverBig, x: 279, y: 550, width: 0, height: 50, right: true},
-        {obj: serverBig, x: 250, y: 550, width: 0, height: 50, left: true},
-        {obj: serverBig, x: 250, y: 510, width: 0, height: 50, right: true},
+        {obj: serverBig, x: 279, y: 560, width: 0, height: 10, right: true},
+        {obj: serverBig, x: 250, y: 550, width: 0, height: 10, left: true},
+        {obj: serverBig, x: 250, y: 510, width: 0, height: 10, right: true},
         {obj: wallServer, x: 990, y: 560, width: 50, height: 0, left: true},
         {obj: wallServer, x: 1025, y: 510, width: 0, height: 20, left: true}
       ]
