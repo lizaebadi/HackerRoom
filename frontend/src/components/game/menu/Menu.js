@@ -14,7 +14,7 @@ const Menu = ({ navigate }) => {
           <h1 id='menu-title'>Menu</h1>
           <ul className='menu-btn'>
             <li><button>Settings</button></li>
-            <li><button onClick={logout}>Quit</button></li>
+            <li><button onClick={logout}>Log out</button></li>
           </ul>
 
       </div>
