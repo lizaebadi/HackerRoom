@@ -12,9 +12,9 @@ const Menu = ({ navigate }) => {
     <div id='menu-container'>
       <div id='menu-list'>
           <h1 id='menu-title'>Menu</h1>
-          <ul className='menu-btn'>
-            <li><button>Settings</button></li>
-            <li><button onClick={logout}>Log out</button></li>
+          <ul>
+            <li><button className='menu-btn'>Settings</button></li>
+            <li><button className='menu-btn' onClick={logout}>Log out</button></li>
           </ul>
 
       </div>
