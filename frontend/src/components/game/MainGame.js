@@ -45,7 +45,7 @@ const MainGame = ({ navigate }) => {
       
       const displayMenu = (event) => {
         if (event.key === 'Escape') {
-          setShowMenu(true);
+          setShowMenu(!showMenu);
         }
       }
 
