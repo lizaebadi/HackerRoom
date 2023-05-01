@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import { useLocation } from 'react-router';
-import './Settings.css'
+import './Settings.css';
+import { EmailForm, UsernameForm, PasswordForm } from './forms/forms.js'
 
 const Settings = ({ navigate }) => {
   const { state } = useLocation();
   const userData = state.userData;
+  const token = state.token;
 
   const [optionSelected, setOptionSeclected] = useState("Main")
 
@@ -25,7 +27,19 @@ const Settings = ({ navigate }) => {
     .catch(error => console.log(error));  
   }
 
-  return (  
+  const deleteAccount = () => {
+    fetch(`/users?id=${userData._id}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': `Bearer ${token}`},
+    })
+    .then(() => {
+      window.localStorage.removeItem("token")
+      navigate('/login')
+    })
+    .catch(error => console.log(error));
+  }
+
+    return (  
           <div id='settings-container'>
             <h1 id='settings-title'>Settings</h1>
 
