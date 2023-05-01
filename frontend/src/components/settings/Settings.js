@@ -2,11 +2,29 @@ import React, {useState} from 'react';
 import { useLocation } from 'react-router';
 import './Settings.css'
 
-const Settings = ({  }) => {
+const Settings = ({ navigate }) => {
   const { state } = useLocation();
   const userData = state.userData;
 
   const [optionSelected, setOptionSeclected] = useState("Main")
+
+  const updateUser = (field, value) => {
+    const body = { id: userData._id };
+    body[field] = value
+    fetch('/users', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    })
+    .then(response => response.json())
+    .then(() => {
+      navigate('/game')
+    })
+    .catch(error => console.log(error));
+    
+  }
 
   return (  
           <div id='settings-container'>

@@ -27,7 +27,7 @@ function App() {
       }/>
       <Route path='/settings' element={
         <PrivateRoute>
-          <Settings />
+          <Settings navigate={ useNavigate() } />
         </PrivateRoute>
       }/>
       <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
