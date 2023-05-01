@@ -3,11 +3,12 @@ import GameArea from '../game.js'
 import Hero from '../hero.js'
 import Object from '../object.js'
 import './MainGame.css';
+import Menu from './menu/Menu.js';
 
 
-const MainGame = ({ }) => {
+const MainGame = ({ navigate }) => {
   const canvasRef = useRef(null);
-
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
       const canvas = canvasRef.current;
@@ -40,25 +41,39 @@ const MainGame = ({ }) => {
         hero.animate()
         requestAnimationFrame(animate);
       }
-      animate(); 
+      animate();
+      
+      const displayMenu = (event) => {
+        if (event.key === 'Escape') {
+          setShowMenu(!showMenu);
+        }
+      }
+
+      window.addEventListener('keydown', displayMenu);
+
+      return () => {
+        window.removeEventListener('keydown', displayMenu);
+      };
 })
   
 
   return(
     <div id='game-container'>
-    <div id="wrapper">
-      <canvas ref={canvasRef} id="canvas1"></canvas>
-    </div>
-    <img src="$MorganB.png" alt="hero" id="hero"/>
-    <img src="server-big.png" alt="server-big" id="server-big"/>
-    <img src="wall-computer.png" alt="wall-computer" id="wall-computer"/>
-    <img src="wall-computer2.png" alt="wall-computer2" id="wall-computer2"/>
-    <img src="desk.png" alt="desk" id="desk"/>
-    <img src="table.png" alt="table" id="table"/>
-    <img src="bookshelf.png" alt="bookshelf" id="bookshelf"/>
-    <img src="wall-server.png" alt="wall-server" id="wall-server"/>
-    <img src="floor-server.png" alt="floor-server" id="floor-server"/>
-    
+      <div id="wrapper">
+        <canvas ref={canvasRef} id="canvas1"></canvas>
+      </div>
+      <img src="$MorganB.png" alt="hero" id="hero"/>
+      <img src="server-big.png" alt="server-big" id="server-big"/>
+      <img src="wall-computer.png" alt="wall-computer" id="wall-computer"/>
+      <img src="wall-computer2.png" alt="wall-computer2" id="wall-computer2"/>
+      <img src="desk.png" alt="desk" id="desk"/>
+      <img src="table.png" alt="table" id="table"/>
+      <img src="bookshelf.png" alt="bookshelf" id="bookshelf"/>
+      <img src="wall-server.png" alt="wall-server" id="wall-server"/>
+      <img src="floor-server.png" alt="floor-server" id="floor-server"/>
+      <div>
+        {showMenu && <Menu navigate={navigate} /> }
+      </div>
     </div>
   )
 }
