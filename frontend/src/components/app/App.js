@@ -10,6 +10,7 @@ import LogInForm from '../login/LogInForm';
 import MainGame from '../game/MainGame';
 import WallComputer from '../wallComputer/WallComputer'
 import PrivateRoute from '../token/PrivateRoute';
+import Settings from '../settings/Settings';
 
 function App() {
   window.addEventListener('beforeunload', () => {
@@ -23,6 +24,11 @@ function App() {
       <PrivateRoute>
         <MainGame navigate={ useNavigate() } />
       </PrivateRoute>
+      }/>
+      <Route path='/settings' element={
+        <PrivateRoute>
+          <Settings />
+        </PrivateRoute>
       }/>
       <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
       <Route path='/login'  element={<LogInForm  navigate={ useNavigate() }/>}/>
