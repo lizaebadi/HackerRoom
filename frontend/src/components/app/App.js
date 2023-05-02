@@ -20,7 +20,7 @@ function App() {
       <Route path='/' element={<Navigate to="/login" />}/>
       <Route path='/game'  element={
       <PrivateRoute>
-        <MainGame />
+        <MainGame navigate={ useNavigate() } />
       </PrivateRoute>
       }/>
       <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
