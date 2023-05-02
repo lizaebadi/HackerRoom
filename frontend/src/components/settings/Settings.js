@@ -3,16 +3,16 @@ import { useLocation } from 'react-router';
 import './Settings.css';
 import { EmailForm, UsernameForm, PasswordForm } from './forms/forms.js'
 
-const Settings = ({ navigate }) => {
+const Settings = ({ navigate}) => {
   const { state } = useLocation();
-  const [userData, setUserData] = useState({})
   const token = window.localStorage.getItem("token")
+  const userData = JSON.parse(window.localStorage.getItem("user"))
 
   const [optionSelected, setOptionSeclected] = useState("Main")
-
-  const getUser = () => {
-    fetch('/users', )
-  }
+  console.log(typeof userData)
+  console.log(token)
+ 
+  
 
   const updateUser = (field, value) => {
     const body = { id: userData._id };
@@ -104,7 +104,7 @@ const Settings = ({ navigate }) => {
                 </div>
               </div>
             </div>
-            <p className='prompt-login-text'><a href="/posts" className='prompt-login-link'>Back</a></p>
+            <p className='prompt-login-text'><a href="/menu" className='prompt-login-link'>Back</a></p>
 
           </div>
 

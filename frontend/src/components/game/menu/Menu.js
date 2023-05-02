@@ -1,7 +1,7 @@
 import React from 'react';
 import './Menu.css'
 
-const Menu = ({ navigate }) => {
+const Menu = ({ navigate}) => {
 
   const logout = () => {
     window.localStorage.removeItem("token")
