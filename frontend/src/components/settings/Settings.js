@@ -5,7 +5,7 @@ import { EmailForm, UsernameForm, PasswordForm } from './forms/forms.js'
 
 const Settings = ({ navigate }) => {
   const { state } = useLocation();
-  const userData = state.userData;
+  const [userData, setUserData] = useState({})
   const token = state.token;
 
   const [optionSelected, setOptionSeclected] = useState("Main")
@@ -48,9 +48,9 @@ const Settings = ({ navigate }) => {
                 <button className="settings-btn" onClick={() => setOptionSeclected("Email")}>Change Email</button>
                 <button className="settings-btn" onClick={() => setOptionSeclected("Username")}>Change Username</button>
                 <button className="settings-btn" onClick={() => setOptionSeclected("Password")}>Change Password</button>
-                <button className="settings-btn delete" onClick={() => setOptionSeclected("Delete")}>Delete Account</button>
+                <button className="delete-btn delete" onClick={() => setOptionSeclected("Delete")}>Delete Account</button>
               </div>
-              <div id='account-page-menu-interaction'>
+              <div id='settings-page-menu-interaction'>
 
                 <div id='account-page-menu-main' className={optionSelected === "Main" ? "show-menu" : "hide-menu"}>
                   <h2 className="menu-title">My information</h2>
@@ -96,7 +96,7 @@ const Settings = ({ navigate }) => {
                 </div>
                 <div id='account-page-menu-delete' className={optionSelected === "Delete" ? "show-menu" : "hide-menu"}>
                   <h2 className="menu-title">Are you sure?</h2>
-                  <button type="submit" className="my-account-btn red-btn" onClick={deleteAccount}>Delete</button>
+                  <button type="submit" className="confirm-btn" onClick={deleteAccount}>Delete</button>
                 </div>
               </div>
             </div>
