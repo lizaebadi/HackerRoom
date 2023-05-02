@@ -43,16 +43,18 @@ const MainGame = ({ navigate }) => {
       }
       animate();
       
-      const displayMenu = (event) => {
+      const handleKeyDown = (event) => {
         if (event.key === 'Escape') {
           setShowMenu(!showMenu);
+        } else if (event.code === "Space" && wallComputer.collision(hero)) {
+          navigate('/wallComputer');;
         }
       }
 
-      window.addEventListener('keydown', displayMenu);
+      window.addEventListener('keydown', handleKeyDown);
 
       return () => {
-        window.removeEventListener('keydown', displayMenu);
+        window.removeEventListener('keydown', handleKeyDown);
       };
 })
   

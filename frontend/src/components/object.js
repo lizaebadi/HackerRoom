@@ -16,7 +16,11 @@ export default class Object {
           hero.x + hero.width > this.positionX &&
           hero.y < this.positionY + this.imageHeight &&
           hero.y + hero.height > this.positionY
-      ){console.log('collision')}
+      ){
+        return true;
+      } else {
+        return false; 
+      }  
   }
 
   render(context, hero) {
