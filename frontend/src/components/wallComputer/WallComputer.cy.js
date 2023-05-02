@@ -20,4 +20,13 @@ describe("Wall Computer", () => {
     cy.get('[data-cy="challenge-instructions"]').should("be.visible");
     cy.get('[data-cy="main-challenge"]').should("be.visible");
   }); 
+
+  it("takes you to the outro when spacebar is pressed", () => {
+    cy.mount(<WallComputer />);
+    cy.get("html").trigger("keydown", { key: " ", code: "Space" });
+    cy.get("html").trigger("keydown", { key: " ", code: "Space" });
+
+    cy.get('[data-cy="outro-heading"]').should("be.visible");
+    cy.get('[data-cy="outro-body"]').should("be.visible");
+  })
 });

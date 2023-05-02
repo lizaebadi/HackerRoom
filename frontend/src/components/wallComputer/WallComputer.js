@@ -49,8 +49,12 @@ function WallComputer() {
       )}
       {page === "outro" && (
         <div>
-          <h1>Congratulations!</h1>
-          <p>You have successfully completed the challenge!</p>
+          <h1 data-cy="outro-heading">Congratulations!</h1>
+          <p data-cy="outro-body">
+            (TBC) relevant clue that will lead the user to the next object that
+            they need to find / interact with (TBC) Stored within an object that
+            can be interacted with and shows clues earned{" "}
+          </p>
         </div>
       )}
     </div>
