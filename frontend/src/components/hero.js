@@ -9,8 +9,8 @@ export default class Hero {
     this.maxFrame = 2; //number of frames per row within sprite sheet
     this.width = this.spriteWidth * 3;
     this.height =  this.spriteHeight * 3;
-    this.x = 300;
-    this.y = 300;
+    this.x = 350;
+    this.y = 350;
     this.speedX = 0;
     this.speedY = 0;
     this.maxSpeed = 6;
@@ -18,7 +18,7 @@ export default class Hero {
     this.isMoving = false;
   }
   draw(context){
-    // context.strokeRect(this.x ,this.y , this.width, this.height);
+    context.strokeRect(this.x ,this.y , this.width, this.height);
     context.drawImage(this.image, this.frameX *this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
   }
   setSpeed(speedX, speedY){
@@ -95,6 +95,7 @@ export default class Hero {
     // y = mx + b
     const leftSlope = -1.6 * this.x + 450
     const rightSlope = ((130/127) * this.x) - 660.48
+    
     if(!(this.y <= leftSlope) && !(this.y <= rightSlope)){
       this.x += this.speedX;
       this.y += this.speedY;
