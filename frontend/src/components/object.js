@@ -12,7 +12,7 @@ export default class Object {
     // context.strokeRect(this.positionX ,this.positionY , this.imageWidth, this.imageHeight);
   }
 
-  collision(hero, objectList){
+  stopCollision(hero, objectList){
     objectList.forEach(object => {
       if ((hero.x < object.x + object.width) &&
         (hero.x + hero.width > object.x) && 
@@ -32,14 +32,24 @@ export default class Object {
             hero.x += 6
           }
         }
-    
-    
     });
-      
   }
+      
+  collision(hero){
+    if (hero.x < this.positionX + this.imageWidth &&
+        hero.x + hero.width > this.positionX &&
+        hero.y < this.positionY + this.imageHeight &&
+        hero.y + hero.height > this.positionY
+    ){
+      return true;
+    } else {
+      return false; 
+    } 
+  }
+  
 
   render(context, hero, objectList) {
     this.draw(context)
-    this.collision(hero, objectList)
+    this.stopCollision(hero, objectList)
   }
 }
