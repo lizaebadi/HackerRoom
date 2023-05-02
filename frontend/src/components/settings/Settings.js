@@ -6,9 +6,13 @@ import { EmailForm, UsernameForm, PasswordForm } from './forms/forms.js'
 const Settings = ({ navigate }) => {
   const { state } = useLocation();
   const [userData, setUserData] = useState({})
-  const token = state.token;
+  const token = window.localStorage.getItem("token")
 
   const [optionSelected, setOptionSeclected] = useState("Main")
+
+  const getUser = () => {
+    fetch('/users', )
+  }
 
   const updateUser = (field, value) => {
     const body = { id: userData._id };
