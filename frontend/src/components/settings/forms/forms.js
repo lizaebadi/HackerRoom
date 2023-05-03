@@ -51,7 +51,6 @@ export const PasswordForm = () => {
         <input placeholder="New password" id="new-password" className="form-field component-input" type='text'/>
         <button type="submit" className="save-btn" >Save</button>
       </form>
-      {/* <button >Forgot password?</button> */}
     </>
   )
 }

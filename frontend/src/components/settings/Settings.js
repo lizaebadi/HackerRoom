@@ -96,7 +96,7 @@ const Settings = ({ navigate}) => {
                   <PasswordForm />
                 </div>
                 <div id='account-page-menu-delete' className={optionSelected === "Delete" ? "show-menu" : "hide-menu"}>
-                  <h2 className="menu-title">Are you sure?</h2>
+                  <h2 className="menu-title" id="confirm-title">Are you sure?</h2>
                   <button type="submit" className="confirm-btn" onClick={deleteAccount}>Delete</button>
                 </div>
               </div>

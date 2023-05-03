@@ -113,6 +113,13 @@ html {
     0px 0px 20px #b393d3;
 }
 
+#confirm-title {
+  font-size: 5rem;
+  margin-top: 7rem;
+  text-shadow: 0px 0px 5px #fd3434, 0px 0px 10px #fd3434, 0px 0px 10px #fd3434,
+    0px 0px 20px #fd3434;
+}
+
 .info-details-title {
   font-size: 1.6rem;
   font-weight: 900;
@@ -211,63 +218,22 @@ html {
   transition: all .15s ease-in-out;
 }
 
-.account-btn:active {
+.save-btn:active {
   transform: translateY(1px);
 }
 
-.delete-btn {
-  display: flex;
-  align-items: center;
-  background: none;
-  border: 2px solid lighten(gray, 24%);
-  height: 48px;
-  padding: 0 24px 0 16px;
-  letter-spacing: .25px;
-  border-radius: 24px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #fd3434;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.delete-btn:hover {
-  background-color: #ff0000;
-}
-
-.delete-btn:active {
-  background-color: #000000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-#my-account-page-profile-pic-upload-container {
-  height: 5.5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 1.5rem;
-  border-radius: 5px;
-  background-color: var(--page-color);
-  gap: 1rem;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.red-btn {
+.confirm-btn {
   background-color: #fd3434;
 }
-.red-btn:hover {
+.confirm-btn:hover {
   background-color: #d52727;
   transform: scale(1.1);
   transition: all .2s ease;
 }
-.red-btn:active {
+.confirm-btn:active {
   background-color: #d52727;
   transition: all .2s ease;
+  transform: translateY(1px);
 }
 
 #account-page-menu-delete h2 {
