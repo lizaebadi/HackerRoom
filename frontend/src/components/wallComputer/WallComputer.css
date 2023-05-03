@@ -16,7 +16,7 @@
 }
 
 
-#wallComputerBox{
+.wallComputerBox{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,7 +39,7 @@
   text-align: justify; 
 }
 
-#wallComputer-heading{
+.wallComputer-heading{
   font-size: 60px;
   font-weight: 700;
   color: #ffffff;
@@ -50,7 +50,7 @@
   top: -60px;
 }
 
-#wallComputer-introduction{
+#wallComputer-body{
   font-size: 40px;
   font-weight: 500;
   color: #ffffff;
@@ -80,4 +80,18 @@
   position: absolute;
   bottom: 30px;
   right: 80px;
+}
+
+#outro-body{
+    font-size: 45px;
+    font-weight: 500;
+    color: #ffffff;
+    position: relative;
+    font-family: 'Pixel Font', monospace;
+    padding-left: 130px;  
+    padding-right: 130px;
+    bottom: -10px;
+    top: -10px;
+    align-items: center;
+    text-align: center;
 }
