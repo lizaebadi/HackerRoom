@@ -37,7 +37,12 @@ app.post("/python", (req, res) => {
       res.json({results: results})
     })
     .catch((err) => {
-      res.status(500).send(`Error executing Python code: ${err.message}`)
+      let errorMessage = err.message;
+      
+      res.status(500).json({
+        error: "Error executing Python code",
+        message: errorMessage
+      });
     });
   });
   

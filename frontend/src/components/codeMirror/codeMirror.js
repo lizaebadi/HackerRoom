@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '@uiw/codemirror-theme-sublime'
-// import './codeMirror.css'
+import './codeMirror.css'
 // import CodeMirror from '@uiw/react-codemirror';
 import Editor from "./editor/editor";
 
@@ -21,13 +21,23 @@ function CodeEditor() {
       body: JSON.stringify({ code: code })
     })
     .then(response => response.json())
-    .then(data => setSrcDoc(`
-    <html>
-      <body>${data.results}</body>
-    </html>`
-    ))
-
-    
+    .then(data => {
+      if (data.error) {
+        // If there is an error, display the error message
+        setSrcDoc(`
+          <html>
+            <body>${data.error}: ${data.message}</body>
+          </html>
+        `);
+      } else {
+        // Otherwise, display the Python output
+        setSrcDoc(`
+          <html>
+            <body>${data.results}</body>
+          </html>
+        `);
+      }
+    });
   }
   
   return (
