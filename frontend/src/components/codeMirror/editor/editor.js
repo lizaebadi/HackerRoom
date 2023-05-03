@@ -25,7 +25,6 @@ export default function Editor(props){
         className='code-mirror-wrapper'
         value={code}
         height="300px"
-        width="900px"
         theme={okaidia}
         extensions={[python()]}
         onChange={onChange}

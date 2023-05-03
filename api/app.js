@@ -4,7 +4,8 @@ const path = require("path");
 const logger = require("morgan");
 const JWT = require("jsonwebtoken");
 const cors = require("cors");
-const fs = require("fs")
+const fs = require("fs");
+const pythonShell = require('python-shell').PythonShell
 
 const usersRouter = require("./routes/users");
 const tokensRouter = require("./routes/tokens");
@@ -24,8 +25,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/python", (req, res) => {
   fs.writeFileSync("test.py", req.body.code)
-  res.json({message: "success"})
-})
+  let options = {
+    mode: 'text',
+    pythonOptions: ['-u'], // get print results in real-time
+  };
+  
+  pythonShell.run('test.py', options).then(results => {
+    console.log('results: %j', results);
+  });
+    // results is an array consisting of messages collected during execution
+    res.json({message: "success"})
+  });
+  
+
 
 // middleware function to check for valid tokens
 const tokenChecker = (req, res, next) => {
