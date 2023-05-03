@@ -61,6 +61,7 @@ html {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  padding: 2rem;
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 900;
@@ -172,31 +173,30 @@ html {
   min-height: 0vh;
 }
 
-.account-btn {
-  display: inline-block;
-  padding: 12px 16px;
-  margin: 10px;
-  font-weight: bold;
+.save-btn {
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #fd6d34;
-  border: 2px solid #444;
-  border-radius: 4px;
-  box-shadow: 5px 5px 10px #0d330e;
-  transition: background-color 0.3s ease-in-out;
+  border: 1px transparent solid;
+  border-radius: 50px;
+  background-color: rgb(229, 49, 160);
+
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 2rem;
+
+  width: 15rem;
+  height: 5.5rem;
+  transition: all .15s ease-in-out;
+  margin: 2rem 0;
 }
 
-.account-btn:hover {
-  background-color: #e0bc2c;
+.save-btn:hover {
+  background-color: #35bcfb;
+  transform: scale(1.1);
+  transition: all .15s ease-in-out;
 }
 
 .account-btn:active {
-  background-color: #65c92b;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateY(1px);
 }
 
 .delete-btn {

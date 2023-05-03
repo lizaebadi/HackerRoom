@@ -47,7 +47,7 @@ const Settings = ({ navigate}) => {
                 <button className="settings-btn" onClick={() => setOptionSeclected("Email")}>Change Email</button>
                 <button className="settings-btn" onClick={() => setOptionSeclected("Username")}>Change Username</button>
                 <button className="settings-btn" onClick={() => setOptionSeclected("Password")}>Change Password</button>
-                <button className="delete-btn delete" onClick={() => setOptionSeclected("Delete")}>Delete Account</button>
+                <button className="delete-btn" onClick={() => setOptionSeclected("Delete")}>Delete Account</button>
               </div>
               <div id='settings-page-menu-interaction'>
               
