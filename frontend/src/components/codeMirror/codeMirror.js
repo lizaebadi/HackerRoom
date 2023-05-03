@@ -13,12 +13,6 @@ function CodeEditor() {
 
   return (
     <div>
-      <CodeMirror
-        value={code}
-        options={options}
-        onChange={(editor, viewUpdate) => {setCode(code); console.log("value:", editor);}}
-      />
-
       <div className="top-pane">
         <Editor />
       </div>
