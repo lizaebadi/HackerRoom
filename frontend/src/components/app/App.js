@@ -9,6 +9,7 @@ import SignUpForm from '../signup/SignUpForm';
 import LogInForm from '../login/LogInForm';
 import MainGame from '../game/MainGame';
 import WallComputer from '../wallComputer/WallComputer'
+import WallServer from '../wallServerSmall/wallServer';
 import PrivateRoute from '../token/PrivateRoute';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
       <Route path='/login'  element={<LogInForm  navigate={ useNavigate() }/>}/>
       <Route path='/wallComputer' element={<PrivateRoute><WallComputer navigate={useNavigate()} /></PrivateRoute>} />
+      <Route path='/wallServer' element={<PrivateRoute><WallServer navigate={useNavigate()} /></PrivateRoute>} />
     </Routes>
   );
 }

@@ -1,1 +1,4 @@
-print(1+3)as
+def add(a, b):
+  return a + b
+
+print(add(1, 2))

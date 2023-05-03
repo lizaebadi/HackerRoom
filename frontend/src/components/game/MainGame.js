@@ -58,7 +58,9 @@ const MainGame = ({ navigate }) => {
         if (event.key === 'Escape') {
           setShowMenu(!showMenu);
         } else if (event.code === "Space" && wallComputer.collision(hero)) {
-          navigate('/wallComputer');;
+          navigate('/wallComputer');
+        } else if (event.code === "Space" && wallServer.collision(hero)) {
+          navigate('/wallServer');
         }
       }
 

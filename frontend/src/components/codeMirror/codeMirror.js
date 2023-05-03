@@ -40,7 +40,7 @@ function CodeEditor() {
         <iframe 
           srcDoc={srcDoc}
           title="output"
-          sandBox="allow-scripts"
+          sandbox="allow-scripts"
           width="100%"
           height="100%"
         />
