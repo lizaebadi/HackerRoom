@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import "./WallComputer.css";
 
 function WallComputer() {
   const [page, setPage] = useState("intro");
@@ -7,7 +8,6 @@ function WallComputer() {
   const navigate = useNavigate();
 
   function handleKeyDown(event) {
-    console.log("handleKeyDown called");
 
     if (event.code === "Space") {
       if (page === "intro") {
@@ -27,21 +27,23 @@ function WallComputer() {
   return () => {
     window.removeEventListener('keydown', handleKeyDown);
   };
-});
+  });
 
   return (
     <div ref={divRef} tabIndex="0">
       {page === "intro" && (
-        <div>
-          <h1 data-cy="wallComputer-heading">Hello World</h1>
-          <p data-cy="introduction">
+        <div className='wallComputerBackground'>
+        <div id='wallComputerBox'>
+          <h1 id='wallComputer-heading' data-cy="wallComputer-heading">Hello World</h1>
+          <p id='wallComputer-introduction' data-cy="introduction">
             To start, we'll be going back to the basics with the classic 'Hello,
             World!' program. But this time, we'll be introducing a whole new
             world - one that the Fakers are determined to exploit. It's up to
             you to stop them, one line of code at a time.
           </p>
-          <p>Hit esc to exit</p>
-          <p>Hit spacebar to continue</p>
+          <p className='exit'>Press Esc to exit</p>
+          <p className='continue'>Press SPACE to continue! ⚔️</p>
+        </div>
         </div>
       )}
       {page === "challenge" && (
@@ -68,6 +70,6 @@ function WallComputer() {
         </div>
       )}
     </div>
- )};
+  );};
 
 export default WallComputer;
