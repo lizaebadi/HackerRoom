@@ -22,7 +22,9 @@ const Settings = ({ navigate}) => {
     })
     .then(response => response.json())
     .then(() => {
+      console.log(token)
       window.location.reload();
+      console.log(token)
     })
     .catch(error => console.log(error));  
   }

@@ -13,10 +13,6 @@ import PrivateRoute from '../token/PrivateRoute';
 import Settings from '../settings/Settings';
 
 function App() {
-  window.addEventListener('beforeunload', () => {
-    localStorage.removeItem('token');
-  });
-
   return (
     <Routes>
       <Route path='/' element={<Navigate to="/login" />}/>
