@@ -11,17 +11,31 @@ function CodeEditor() {
     setCode(value)
   }, []);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSrcDoc(
-    `<html>
-      <body>${code}</body>
-    </html>`
-      )
-    }, 250)
+  const submitPython = () => {
+    fetch( '/python', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ code: code })
+    })
+      .then(response => console.log(response.json()))
+  
+  }
+    // console.log(code)
+  
 
-    return () => clearTimeout(timeout)
-  }, [code])
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setSrcDoc(
+  //   `<html>
+  //     <body>${code}</body>
+  //   </html>`
+  //     )
+  //   }, 250)
+
+  //   return () => clearTimeout(timeout)
+  // }, [code])
   
   
   return (
@@ -42,6 +56,7 @@ function CodeEditor() {
           height="100%"
         />
       </div>
+      <button className="submit-button" onClick={submitPython}>Submit</button>
     </div>
   );
 }
