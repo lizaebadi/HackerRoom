@@ -50,6 +50,7 @@ body {
   margin-top: 5px;
   height: 300px;
   color: rgb(167, 131, 247);
+  font-size: 14px;
   white-space: pre-wrap;
 }
 .pane {
@@ -62,6 +63,11 @@ body {
   border: 5px solid black;
   font-family: 'Monokai', monospace;
   word-wrap: break-word;
+}
+
+.editor-container {
+  font-size: 14px;
+  
 }
 
 .header {
