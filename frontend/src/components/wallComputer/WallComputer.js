@@ -50,7 +50,7 @@ function WallComputer() {
         </div>
       )}
       {page === "challenge" && (
-        <div className='wallComputerBackground'>
+        <div className='wallComputerBackground'> 
           <h1 data-cy="challenge-instructions">
             A simple challenge that requires the user to enter code that outputs
             the Hello World string
@@ -58,10 +58,7 @@ function WallComputer() {
           
           <CodeEditor />
           
-          <p data-cy="main-challenge">This is the main challenge.</p>
           
-          <p>Hit esc to exit</p>
-          <p>Hit spacebar to continue</p>
         </div>
       )}
       {page === "outro" && (

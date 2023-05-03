@@ -1,0 +1,26 @@
+body {
+  background-image: url("../../../public/img/bluecomputerscreen.gif");
+  margin: 0;
+}
+
+.editor-title {
+  color: white;
+}
+
+.submit-button {
+  background-color: rgb(39, 40, 39);
+}
+
+.top-pane {
+  position: relative;
+  width: 50%;
+  left: 25%;
+  top: 10px;
+  background-color: rgb(39, 40, 39);
+}
+
+.pane {
+  height: 50vh;
+  display: flex;
+  background-color: rgb(39, 40, 39);
+}

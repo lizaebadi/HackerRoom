@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { python } from '@codemirror/lang-python';
 import CodeMirror from '@uiw/react-codemirror';
+import { EditorView } from '@codemirror/view';
+import "../codeMirror.css"
 import { okaidia } from '@uiw/codemirror-theme-okaidia';
 
 
@@ -26,7 +28,7 @@ export default function Editor(props){
         value={code}
         height="300px"
         theme={okaidia}
-        extensions={[python()]}
+        extensions={[python(), EditorView.lineWrapping]}
         onChange={onChange}
       />
       

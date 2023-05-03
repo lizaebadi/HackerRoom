@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import '@uiw/codemirror-theme-sublime'
+import './codeMirror.css'
 // import CodeMirror from '@uiw/react-codemirror';
 import Editor from "./editor/editor";
 
@@ -26,21 +27,6 @@ function CodeEditor() {
 
     
   }
-  
-  
-
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setSrcDoc(
-    // `<html>
-    //   <body>${code}</body>
-    // </html>`
-  //     )
-  //   }, 250)
-
-  //   return () => clearTimeout(timeout)
-  // }, [code])
-  
   
   return (
     <div>
