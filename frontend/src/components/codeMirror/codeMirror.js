@@ -1,20 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import '@uiw/codemirror-theme-sublime'
 import CodeMirror from '@uiw/react-codemirror';
 import Editor from "./editor/editor";
 
 function CodeEditor() {
-  const [code, setCode] = useState("");
-
-  const options = {
-    theme: 'dracula',
-    mode: "ruby",
-  }
-
+  const [python, setPython] = useState("")
   return (
     <div>
       <div className="top-pane">
-        <Editor />
+        <Editor 
+          value={python}
+          onChange={setPython}
+        />
       </div>
 
       <div className="pane">
