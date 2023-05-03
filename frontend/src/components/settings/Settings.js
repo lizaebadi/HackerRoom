@@ -45,16 +45,16 @@ const Settings = ({ navigate}) => {
 
     return (  
           <div id='settings-container'>
-            <h1 id='settings-title'>Settings</h1>
-
             <div id="settings-form">
               <div id='settings-menu'>
+              <h1 id='settings-title'>Settings</h1>
                 <button className="settings-btn" onClick={() => setOptionSeclected("Email")}>Change Email</button>
                 <button className="settings-btn" onClick={() => setOptionSeclected("Username")}>Change Username</button>
                 <button className="settings-btn" onClick={() => setOptionSeclected("Password")}>Change Password</button>
                 <button className="delete-btn delete" onClick={() => setOptionSeclected("Delete")}>Delete Account</button>
               </div>
               <div id='settings-page-menu-interaction'>
+              
 
                 <div id='account-page-menu-main' className={optionSelected === "Main" ? "show-menu" : "hide-menu"}>
                   <h2 className="menu-title">My information</h2>
