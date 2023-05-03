@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { python } from '@codemirror/lang-python';
 import CodeMirror from '@uiw/react-codemirror';
 import { EditorView } from '@codemirror/view';
-import "../codeMirror.css"
+// import "../codeMirror.css"
 import { okaidia } from '@uiw/codemirror-theme-okaidia';
 
 

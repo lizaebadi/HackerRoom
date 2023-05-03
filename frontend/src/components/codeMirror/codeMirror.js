@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '@uiw/codemirror-theme-sublime'
-import './codeMirror.css'
+// import './codeMirror.css'
 // import CodeMirror from '@uiw/react-codemirror';
 import Editor from "./editor/editor";
 
@@ -29,14 +29,13 @@ function CodeEditor() {
   }
   
   return (
-    <div>
+    <div className="parent">
       <div className="top-pane">
         <Editor 
           code={code}
           onChange={onChange}
         />
       </div>
-
       <div className="pane">
         <iframe 
           srcDoc={srcDoc}
@@ -46,7 +45,7 @@ function CodeEditor() {
           height="100%"
         />
       </div>
-      <button className="submit-button" onClick={submitPython}>Submit</button>
+      <button className="submit-button" onClick={submitPython}><p className="button-title">Submit</p></button>
     </div>
   );
 }
