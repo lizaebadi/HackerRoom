@@ -34,6 +34,7 @@ const LogInForm = ({ navigate }) => {
     } else {
         let data = await response.json()
         window.localStorage.setItem("token", data.token)
+        window.localStorage.setItem("user", JSON.stringify(data.user))
         navigate('/game');
     }
   }
