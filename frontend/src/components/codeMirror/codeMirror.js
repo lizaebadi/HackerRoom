@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import '@uiw/codemirror-theme-sublime'
-import CodeMirror from '@uiw/react-codemirror';
+// import CodeMirror from '@uiw/react-codemirror';
 import Editor from "./editor/editor";
 
 function CodeEditor() {
-  const [python, setPython] = useState("")
+
+
+  
   return (
     <div>
       <div className="top-pane">
-        <Editor 
-          value={python}
-          onChange={setPython}
-        />
+        <Editor />
       </div>
 
       <div className="pane">
         <iframe 
+          // srcDoc={srcDoc}
           title="output"
           sandBox="allow-scripts"
           width="100%"

@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useState } from "react";
 import { python } from '@codemirror/lang-python';
 import CodeMirror from '@uiw/react-codemirror';
 import { okaidia } from '@uiw/codemirror-theme-okaidia';
 
-export default function Editor(props){
-  const {
-    value, 
-    onChange
-  } = props
 
-  function handleChange(editor, data, value){
-    onChange(value)
-  }
+export default function Editor(props){
+  const [code, setCode] = useState("")
+
+  const onChange = React.useCallback((value, viewUpdate) => {
+    setCode(value)
+  }, []);
+
   return (
     <div className="editor-container">
       <div className="editor-title">
@@ -19,12 +18,12 @@ export default function Editor(props){
       </div>
       <CodeMirror
         className='code-mirror-wrapper'
-        value="// code here"
+        value={code}
         height="300px"
         width="900px"
         theme={okaidia}
         extensions={[python()]}
-        onChange={handleChange}
+        onChange={onChange}
       />
       
     </div>
