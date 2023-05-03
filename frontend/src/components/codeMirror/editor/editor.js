@@ -26,7 +26,6 @@ export default function Editor(props){
       <CodeMirror
         className='code-mirror-wrapper'
         value={code}
-        height="300px"
         theme={okaidia}
         extensions={[python(), EditorView.lineWrapping]}
         onChange={onChange}
