@@ -22,7 +22,7 @@ const Settings = ({ navigate}) => {
     })
     .then(response => response.json())
     .then(() => {
-      navigate('/game')
+      window.location.reload();
     })
     .catch(error => console.log(error));  
   }
