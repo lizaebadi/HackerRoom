@@ -6,7 +6,7 @@ import { EmailForm, UsernameForm, PasswordForm } from './forms/forms.js'
 const Settings = ({ navigate}) => {
   const { state } = useLocation();
   const token = window.localStorage.getItem("token")
-  const userData = JSON.parse(window.localStorage.getItem("user"))
+  let userData = JSON.parse(window.localStorage.getItem("user"))
 
   const [optionSelected, setOptionSeclected] = useState("Main")
 
@@ -20,11 +20,10 @@ const Settings = ({ navigate}) => {
       },
       body: JSON.stringify(body)
     })
-    .then(response => response.json())
     .then(() => {
-      console.log(token)
+      userData[field] = value;
+      window.localStorage.setItem("user", JSON.stringify(userData))
       window.location.reload();
-      console.log(token)
     })
     .catch(error => console.log(error));  
   }
