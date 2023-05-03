@@ -9,10 +9,6 @@ const Settings = ({ navigate}) => {
   const userData = JSON.parse(window.localStorage.getItem("user"))
 
   const [optionSelected, setOptionSeclected] = useState("Main")
-  console.log(typeof userData)
-  console.log(token)
- 
-  
 
   const updateUser = (field, value) => {
     const body = { id: userData._id };
@@ -104,8 +100,6 @@ const Settings = ({ navigate}) => {
                 </div>
               </div>
             </div>
-            <p className='prompt-login-text'><a href="/menu" className='prompt-login-link'>Back</a></p>
-
           </div>
 
   );
