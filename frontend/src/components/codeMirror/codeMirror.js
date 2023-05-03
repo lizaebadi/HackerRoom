@@ -21,9 +21,11 @@ function CodeEditor() {
       body: JSON.stringify({ code: code })
     })
     .then(response => response.json())
-    .then(data => setSrcDoc(`<html>
-    <body>${data.results}</body>
-  </html>`))
+    .then(data => setSrcDoc(`
+    <html>
+      <body>${data.results}</body>
+    </html>`
+    ))
 
     
   }

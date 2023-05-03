@@ -23,20 +23,22 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
+
+
 app.post("/python", (req, res) => {
   fs.writeFileSync("test.py", req.body.code)
   let options = {
     mode: 'text',
     pythonOptions: ['-u'], // get print results in real-time
   };
-  try{
-    pythonShell.run('test.py', options).then((results) => {
+  
+  pythonShell.run('test.py', options)
+    .then((results) => {
       res.json({results: results})
+    })
+    .catch((err) => {
+      res.status(500).send(`Error executing Python code: ${err.message}`)
     });
-  } catch(error) {
-    console.log("ERROR:", error)
-  }
-    
   });
   
 
