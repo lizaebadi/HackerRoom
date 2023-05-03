@@ -5,11 +5,16 @@ import { okaidia } from '@uiw/codemirror-theme-okaidia';
 
 
 export default function Editor(props){
-  const [code, setCode] = useState("")
 
-  const onChange = React.useCallback((value, viewUpdate) => {
-    setCode(value)
-  }, []);
+  const {
+    code,
+    onChange
+  } = props
+  // const [code, setCode] = useState("")
+
+  // const onChange = React.useCallback((value, viewUpdate) => {
+  //   setCode(value)
+  // }, []);
 
   return (
     <div className="editor-container">
