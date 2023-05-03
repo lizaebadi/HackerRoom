@@ -33,7 +33,6 @@ const LogInForm = ({ navigate }) => {
         setErrorMessage('Password is incorrect. Try again!');
     } else {
         let data = await response.json()
-        console.log(data)
         window.localStorage.setItem("token", data.token)
         window.localStorage.setItem("user", JSON.stringify(data.user))
         navigate('/game');

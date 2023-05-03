@@ -13,7 +13,7 @@ export const EmailForm = ({updateUser}) => {
 
   return (
     <>
-      <form id='email-form' class="component-form" onSubmit={handleSubmit}>
+      <form id='email-form' className="component-form" onSubmit={handleSubmit}>
         <input placeholder="New Email" id="email" className="form-field component-input" type='text'/>
         <button className="save-btn" type="submit">Save</button>
       </form>
@@ -35,7 +35,7 @@ export const UsernameForm = ({updateUser}) => {
 
   return (
     <>
-      <form id='username-form' class="component-form"  onSubmit={handleSubmit}>
+      <form id='username-form' className="component-form"  onSubmit={handleSubmit}>
         <input placeholder="New username" id="username" className="form-field component-input"type='text'/>
         <button type="submit" className="save-btn">Save</button>
       </form>
@@ -46,7 +46,7 @@ export const UsernameForm = ({updateUser}) => {
 export const PasswordForm = () => {
   return (
     <>
-      <form id='password-form' class="component-form" >
+      <form id='password-form' className="component-form" >
         <input placeholder="Current password" id="curr-password" className="form-field component-input"type='text'/>
         <input placeholder="New password" id="new-password" className="form-field component-input" type='text'/>
         <button type="submit" className="save-btn" >Save</button>
