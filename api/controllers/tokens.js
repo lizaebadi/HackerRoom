@@ -21,7 +21,7 @@ const SessionsController = {
           }
           else {
             const token = await TokenGenerator.jsonwebtoken(user.id)
-            res.status(201).json({ token: token, message: "OK" });
+            res.status(201).json({ user: user, token: token, message: "OK" });
           }
         })
       }
