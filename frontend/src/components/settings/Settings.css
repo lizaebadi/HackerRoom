@@ -152,7 +152,15 @@ html {
  transition: all .1s ease-in-out;
 }
 
+.component-input:focus {
+  outline: #35bcfb 4px solid;
+  transition: outline .1s ease-in-out;
+}
 
+.component-input:focus::placeholder {
+  color: rgb(186, 186, 186);
+  transition: all .1s ease-in-out;
+}
 
 .confirm-btn {
   cursor: pointer;
