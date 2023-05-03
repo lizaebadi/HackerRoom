@@ -19,18 +19,22 @@ function CodeEditor() {
       },
       body: JSON.stringify({ code: code })
     })
-      .then(response => console.log(response.json()))
-  
+    .then(response => response.json())
+    .then(data => setSrcDoc(`<html>
+    <body>${data.results}</body>
+  </html>`))
+
+    
   }
-    // console.log(code)
+  
   
 
   // useEffect(() => {
   //   const timeout = setTimeout(() => {
   //     setSrcDoc(
-  //   `<html>
-  //     <body>${code}</body>
-  //   </html>`
+    // `<html>
+    //   <body>${code}</body>
+    // </html>`
   //     )
   //   }, 250)
 

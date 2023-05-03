@@ -29,12 +29,14 @@ app.post("/python", (req, res) => {
     mode: 'text',
     pythonOptions: ['-u'], // get print results in real-time
   };
-  
-  pythonShell.run('test.py', options).then(results => {
-    console.log('results: %j', results);
-  });
-    // results is an array consisting of messages collected during execution
-    res.json({message: "success"})
+  try{
+    pythonShell.run('test.py', options).then((results) => {
+      res.json({results: results})
+    });
+  } catch(error) {
+    console.log("ERROR:", error)
+  }
+    
   });
   
 
