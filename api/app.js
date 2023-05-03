@@ -4,6 +4,7 @@ const path = require("path");
 const logger = require("morgan");
 const JWT = require("jsonwebtoken");
 const cors = require("cors");
+const fs = require("fs")
 
 const usersRouter = require("./routes/users");
 const tokensRouter = require("./routes/tokens");
@@ -22,7 +23,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/python", (req, res) => {
-  console.log(req.body)
+  fs.writeFileSync("test.py", req.body.code)
   res.json({message: "success"})
 })
 
