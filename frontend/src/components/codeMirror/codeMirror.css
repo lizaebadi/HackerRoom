@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .background {
@@ -90,7 +91,7 @@
   position: absolute;
   margin-top: 20px;
   padding: 10px 20px;
-  left: 625px;
+  left: 50%;
   top: 540px;
   background-color: rgb(39, 40, 35);
   color: white;
@@ -100,5 +101,6 @@
   height: 40px;
   font-family: 'Pixel Font', monospace;
   font-size: 20px;
-
+  bottom: 0;
+  transform: translateX(-50%);
 }
