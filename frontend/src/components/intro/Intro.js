@@ -7,7 +7,7 @@ const Intro = () => {
 
   return (
     <div id='intro-container'>
-      <h1>Welcome ${username}!</h1>
+      <h1>Welcome {username}!</h1>
       <p>Get ready to hone your coding skills and knowledge while having fun.</p>
       <p>Use the Arrow keys to move your character around the room</p>
       <p>Use the Space bar to interact with objects</p>

@@ -4,13 +4,18 @@ import Hero from '../hero.js'
 import Object from '../object.js'
 import './MainGame.css';
 import Menu from '../menu/Menu.js';
-
+import Intro from '../intro/Intro.js';
 
 const MainGame = ({ navigate }) => {
   const canvasRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
+  const [showIntro, setShowIntro] = useState(true)
 
   useEffect(() => {
+    const introTimeout = setTimeout(() => {
+      setShowIntro(false);
+    }, 5000);
+
       const canvas = canvasRef.current;
       const ctx = canvas.getContext('2d');
       canvas.width =1092;
@@ -67,6 +72,7 @@ const MainGame = ({ navigate }) => {
       window.addEventListener('keydown', handleKeyDown);
 
       return () => {
+        clearTimeout(introTimeout);
         window.removeEventListener('keydown', handleKeyDown);
       };
 })
@@ -74,6 +80,7 @@ const MainGame = ({ navigate }) => {
 
   return(
     <div id='game-container'>
+      {showIntro && <Intro />}
       <div id="wrapper">
         <canvas ref={canvasRef} id="canvas1"></canvas>
       </div>
