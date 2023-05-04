@@ -17,12 +17,12 @@
 
 
 .wallComputerBox{
-  position: relative;
+  position: absolute;
   top: 50%;
-  left: 35%;
+  left: 50%;
   transform: translate(-45%, -50%);
   width: 80%;
-  height: 35rem;
+  height: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,4 +94,6 @@
     top: -10px;
     align-items: center;
     text-align: center;
-}
+} 
+
+
