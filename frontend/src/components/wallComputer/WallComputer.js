@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./WallComputer.css";
+import codeImage from './question1.png';
 
 
 function WallComputer() {
@@ -57,6 +58,30 @@ function WallComputer() {
       answers: ["var = 10", "variable 10", "int var = 10", "var := 10"],
       correctAnswer: 0,
     },
+    {
+      question: "What is Python syntax for creating a variable and assigning the number 10 to it?" ,
+      codeImage: null,
+      answers: ["variable_name == 10", "new variable_name = 10", "def variable_name = 10", "variable_name = 10"],
+      correctAnswer: 3,
+    },
+    {
+      question: "What is the value of total_cost that gets printed?" ,
+      codeImage: require("./question1.png"),
+      answers: ["5", "15", "10", "50"],
+      correctAnswer: 1,
+    },
+    {
+      question: "Which function outputs text to the terminal?" ,
+      codeImage: null,
+      answers: ["output()", "write()", "type()", "print()"],
+      correctAnswer: 3,
+    },
+    {
+      question: "Which of the following will produce a SyntaxError?" ,
+      codeImage: null,
+      answers: ["answer = is_this_an_error", "answer = \"Is this an error\"", "answer = \"Is this an error\'", "answer = \"This is not an error\""],
+      correctAnswer: 2,
+    },
   ]
 
   return (
@@ -80,6 +105,7 @@ function WallComputer() {
         <div className="wallComputerBackground">
           <div id="question-box" key={currentQuestion}>
             <h2 id="current-question">{questions[currentQuestion].question}</h2>
+            {questions[currentQuestion].codeImage && <img id='code-image' src={questions[currentQuestion].codeImage} alt="code" />}
             {questions[currentQuestion].answers.map((answer, answerIndex) => (
               <div className="answer" key={answerIndex}>
                 <div

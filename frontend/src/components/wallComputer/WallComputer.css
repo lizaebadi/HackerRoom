@@ -111,6 +111,7 @@
   border: 5px solid #000000;
   padding: 20px;
   border-radius: 20px;
+  text-align: center;
 }
 
 #current-question {
@@ -194,4 +195,9 @@ button:hover {
   border: 5px solid #ffffff;
   border-radius: 20px;
   font-family: 'Pixel Font', monospace;
+}
+
+#code-image{
+  text-align: center;
+  padding-bottom: 20px;
 }
