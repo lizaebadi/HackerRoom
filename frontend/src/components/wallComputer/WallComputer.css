@@ -137,7 +137,7 @@
 }
 
 
-button {
+.wallCompButton {
   margin-top: 20px;
   padding: 10px 20px;
   border-radius: 10px;
@@ -151,7 +151,7 @@ button {
   font-family: 'Pixel Font', monospace;
 }
 
-button:hover {
+.wallCompButton:hover {
   background-color: #272727;
   color: #f7d94c;
 }

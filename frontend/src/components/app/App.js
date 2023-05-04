@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import {
   useNavigate,
   Routes,
@@ -14,12 +15,14 @@ import PrivateRoute from '../token/PrivateRoute';
 import Settings from '../settings/Settings';
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true)
+
   return (
     <Routes>
       <Route path='/' element={<Navigate to="/login" />}/>
       <Route path='/game'  element={
       <PrivateRoute>
-        <MainGame navigate={ useNavigate() } />
+        <MainGame navigate={useNavigate()} showIntro={showIntro} setShowIntro={setShowIntro} />
       </PrivateRoute>
       }/>
       <Route path='/settings' element={

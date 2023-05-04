@@ -3,12 +3,15 @@ import GameArea from '../game.js'
 import Hero from '../hero.js'
 import Object from '../object.js'
 import './MainGame.css';
-import Menu from './menu/Menu.js';
+import Menu from '../menu/Menu.js';
+import Intro from '../intro/Intro.js';
 
-
-const MainGame = ({ navigate }) => {
+const MainGame = ({ navigate, showIntro, setShowIntro }) => {
   const canvasRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
+  const hideIntro = () => {
+    setShowIntro(false);
+  };
 
   useEffect(() => {
       const canvas = canvasRef.current;
@@ -74,6 +77,7 @@ const MainGame = ({ navigate }) => {
 
   return(
     <div id='game-container'>
+      
       <div id="wrapper">
         <canvas ref={canvasRef} id="canvas1"></canvas>
       </div>
@@ -86,9 +90,8 @@ const MainGame = ({ navigate }) => {
       <img src="bookshelf.png" alt="bookshelf" id="bookshelf"/>
       <img src="wall-server.png" alt="wall-server" id="wall-server"/>
       <img src="floor-server.png" alt="floor-server" id="floor-server"/>
-      <div>
-        {showMenu && <Menu navigate={navigate} /> }
-      </div>
+      {showIntro && <Intro hideIntro={hideIntro}/>}
+      {showMenu && <Menu navigate={navigate} /> }
     </div>
   )
 }
