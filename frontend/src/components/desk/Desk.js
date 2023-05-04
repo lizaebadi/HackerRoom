@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./WallComputer.css";
+import "./Desk.css";
 
 
-function WallComputer() {
+function Desk() {
   const [page, setPage] = useState("intro");
   const divRef = useRef(null);
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ function WallComputer() {
       }
     } else {
       // answer is incorrect
-      setMessage("Not quite, try again!");
+      setMessage("That's not the correct answer. Keep trying!");
       setTimeout(() => setMessage(''), 3000); // hide message after 3 seconds
     }
   }
@@ -52,33 +52,33 @@ function WallComputer() {
 
   const questions = [
     {
-      question: "What is the syntax for declaring a variable in Python?",
-      codeImage: null,
-      answers: ["var = 10", "variable 10", "int var = 10", "var := 10"],
+      question: "Determine the truth value of the following expression:",
+      codeImage: require("./question2.png"),
+      answers: ["True", "False"],
       correctAnswer: 0,
     },
     {
-      question: "What is Python syntax for creating a variable and assigning the number 10 to it?" ,
-      codeImage: null,
-      answers: ["variable_name == 10", "new variable_name = 10", "def variable_name = 10", "variable_name = 10"],
-      correctAnswer: 3,
+      question: "Determine the truth value of the following expression:",
+      codeImage: require("./question3.png"),
+      answers: ["True", "False"],
+      correctAnswer: 0,
     },
     {
-      question: "What is the value of total_cost that gets printed?" ,
-      codeImage: require("./question1.png"),
-      answers: ["5", "15", "10", "50"],
+      question: "Determine the truth value of the following expression:",
+      codeImage: require("./question5.png"),
+      answers: ["True", "False"],
       correctAnswer: 1,
     },
     {
-      question: "Which function outputs text to the terminal?" ,
-      codeImage: null,
-      answers: ["output()", "write()", "type()", "print()"],
-      correctAnswer: 3,
+      question: "Read the following code carefully. What will happen when the code is executed?",
+      codeImage: require("./question4.png"),
+      answers: ["\"x is equal to zero\" will print to the terminal", "There will be a SyntaxError", "\"x is greater than zero\" will print to the terminal", "\"x is equal to zero\" and \"x is greater than zero\" will print to the terminal"],
+      correctAnswer: 1,
     },
     {
-      question: "Which of the following will produce a SyntaxError?" ,
+      question: "Which of the following variables contains a Boolean value?",
       codeImage: null,
-      answers: ["answer = is_this_an_error", "answer = \"Is this an error\"", "answer = \"Is this an error\'", "answer = \"This is not an error\""],
+      answers: ["my_fun_variable = 2 + 9", "my_chill_variable = \"This is True.\"", "my_cool_variable = 7 + 8 != 13", "my_super_variable = \"True\" + \"False\""],
       correctAnswer: 2,
     },
   ]
@@ -88,9 +88,9 @@ function WallComputer() {
       {page === "intro" && (
         <div className='wallComputerBackground'>
         <div className='wallComputerBox'>
-          <h1 className='wallComputer-heading' data-cy="wallComputer-heading">Hello World</h1>
+          <h1 className='wallComputer-heading'>Control Flow</h1>
           <p id='wallComputer-body' data-cy="introduction">
-            Are you prepared to put your knowledge to the test?
+            Are you ready for the quiz?
           </p>
           <p className='exit'>Press Esc to exit</p>
           <p className='continue'>Press SPACE to continue! ⚔️</p>
@@ -128,7 +128,7 @@ function WallComputer() {
           <div className='wallComputerBox'>
           <h1 className='wallComputer-heading' data-cy="outro-heading">Congratulations!</h1>
           <p id='outro-body' data-cy="outro-body">
-            Head over to the blue desk to explore Control Flow
+            Check out the grey server and discover the power of Lists
           </p>
           <p className='exit'>Press Esc to exit</p>
           <p className='continue'>Press SPACE to continue! ⚔️</p>
@@ -138,4 +138,4 @@ function WallComputer() {
     </div>
   );};
 
-export default WallComputer;
+export default Desk;
