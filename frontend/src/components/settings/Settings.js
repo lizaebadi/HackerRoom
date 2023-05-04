@@ -89,10 +89,6 @@ const Settings = ({ navigate}) => {
 
                 <div id='account-page-menu-password' className={optionSelected === "Password" ? "show-menu" : "hide-menu"}>
                   <h2 className="menu-title">Password</h2>
-                  <div>
-                    <p className="info-details-title">Current password:</p>
-                    <p className="info-details-value">********</p>
-                  </div>
                   <PasswordForm />
                 </div>
                 <div id='account-page-menu-delete' className={optionSelected === "Delete" ? "show-menu" : "hide-menu"}>
