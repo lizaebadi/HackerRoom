@@ -1,21 +1,23 @@
 .outer {
-  background: linear-gradient(to left, #141414, #333 10%, #0800ff 5%, #232222 75%);
-  
+  background-image: url('../../../public/img/bluecomputerscreen.gif');
+  background-repeat: repeat;
 }
 .hello {
   color: white;
   overflow-wrap: break-word;
   font-size: medium;
-  margin-left: 20px;
+  margin-left: 60px;
   width: 800px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .control {
   color: white;
   overflow-wrap: break-word;
   font-size: medium;
-  margin-left: 20px;
+  margin-left: 60px;
   width: 800px;
+  background-color: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -23,15 +25,15 @@
   color: white;
   overflow-wrap: break-word;
   font-size: medium;
-  margin-left: 20px;
+  margin-left: 60px;
   width: 800px;
+  background-color: rgba(0, 0, 0, 0.8);
+
 
 }
 
 #code {
   width: 480px;
-
-  color: white;
   margin-left: 20px;
   margin-top: 20px;
 
@@ -41,8 +43,9 @@
   color: white;
   overflow-wrap: break-word;
   font-size: medium;
-  margin-left: 20px;
+  margin-left: 60px;
   width: 800px;
+  background-color: rgba(0, 0, 0, 0.8);
 
 }
 
