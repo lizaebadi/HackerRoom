@@ -14,7 +14,7 @@ const MainGame = ({ navigate }) => {
   useEffect(() => {
     const introTimeout = setTimeout(() => {
       setShowIntro(false);
-    }, 5000);
+    }, 10000);
 
       const canvas = canvasRef.current;
       const ctx = canvas.getContext('2d');
@@ -80,7 +80,7 @@ const MainGame = ({ navigate }) => {
 
   return(
     <div id='game-container'>
-      {showIntro && <Intro />}
+      
       <div id="wrapper">
         <canvas ref={canvasRef} id="canvas1"></canvas>
       </div>
@@ -93,9 +93,8 @@ const MainGame = ({ navigate }) => {
       <img src="bookshelf.png" alt="bookshelf" id="bookshelf"/>
       <img src="wall-server.png" alt="wall-server" id="wall-server"/>
       <img src="floor-server.png" alt="floor-server" id="floor-server"/>
-      <div>
-        {showMenu && <Menu navigate={navigate} /> }
-      </div>
+      {showIntro && <Intro />}
+      {showMenu && <Menu navigate={navigate} /> }
     </div>
   )
 }
