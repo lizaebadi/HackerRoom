@@ -3,7 +3,7 @@ import GameArea from '../game.js'
 import Hero from '../hero.js'
 import Object from '../object.js'
 import './MainGame.css';
-import Menu from './menu/Menu.js';
+import Menu from '../menu/Menu.js';
 
 
 const MainGame = ({ navigate }) => {
