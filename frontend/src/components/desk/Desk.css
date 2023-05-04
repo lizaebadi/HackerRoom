@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'Pixel Font';
+  src: url('../../../public/font/pixel-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wallComputerBackground{
+  background-image: url('../../../public/img/bluecomputerscreen.gif');
+  background-size: cover;
+  
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
+
+
+.wallComputerBox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  width: 80%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  gap: 2rem;
+  border-radius: 5px;
+  padding: 2rem 0;
+  margin: auto;
+  background-color: rgba(0,0,0,0.9);
+  box-shadow: 0px 0px 3px rgb(175, 175, 175); 
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  text-align: justify; 
+}
+
+.wallComputer-heading{
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0px 0px 0px #b393d3, 0px 0px 0px #b393d3, 0px 0px 0px #b393d3,
+    0px 0px 20px #b393d3; 
+  font-family: 'Pixel Font', monospace;
+  position: relative;
+  top: -60px;
+}
+
+#wallComputer-body{
+  font-size: 40px;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  font-family: 'Pixel Font', monospace;
+  padding-left: 70px;  
+  padding-right: 70px;
+  bottom: -10px;
+  top: -30px;
+}
+
+.exit{
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Pixel Font', monospace;
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+}
+
+.continue{
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Pixel Font', monospace;
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+}
+
+#outro-body{
+    font-size: 45px;
+    font-weight: 500;
+    color: #ffffff;
+    position: relative;
+    font-family: 'Pixel Font', monospace;
+    padding-left: 130px;  
+    padding-right: 130px;
+    bottom: -10px;
+    top: -10px;
+    align-items: center;
+    text-align: center;
+} 
+
+.wallComputerBackground {
+  background-color: #93a4a5;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#question-box {
+  background-color: #000544;
+  border: 5px solid #000000;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#current-question {
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Pixel Font', monospace;
+}
+
+.answer {
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+
+.wallCompButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f7d94c;
+  font-size: 30px;
+  font-weight: bold;
+  color: #272727;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Pixel Font', monospace;
+}
+
+.wallCompButton:hover {
+  background-color: #272727;
+  color: #f7d94c;
+}
+
+.checkbox {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #f7d94c;
+  border-radius: 5px;
+}
+
+.checked {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #f7d94c;
+  border-radius: 50%;
+}
+
+.label {
+  display: inline-block;
+  font-size: 35px;
+  color: #ffffff;
+  font-family: 'Pixel Font', monospace;
+}
+
+.message {
+  font-size: 20px;
+  color: #f1ee25;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #000658;
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+  font-family: 'Pixel Font', monospace;
+}
+
+#code-image{
+  text-align: center;
+  padding-bottom: 20px;
+}
