@@ -10,12 +10,11 @@ const MainGame = ({ navigate }) => {
   const canvasRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
   const [showIntro, setShowIntro] = useState(true)
+  const hideIntro = () => {
+    setShowIntro(false);
+  };
 
   useEffect(() => {
-    const introTimeout = setTimeout(() => {
-      setShowIntro(false);
-    }, 10000);
-
       const canvas = canvasRef.current;
       const ctx = canvas.getContext('2d');
       canvas.width =1092;
@@ -72,7 +71,6 @@ const MainGame = ({ navigate }) => {
       window.addEventListener('keydown', handleKeyDown);
 
       return () => {
-        clearTimeout(introTimeout);
         window.removeEventListener('keydown', handleKeyDown);
       };
 })
@@ -93,7 +91,7 @@ const MainGame = ({ navigate }) => {
       <img src="bookshelf.png" alt="bookshelf" id="bookshelf"/>
       <img src="wall-server.png" alt="wall-server" id="wall-server"/>
       <img src="floor-server.png" alt="floor-server" id="floor-server"/>
-      {showIntro && <Intro />}
+      {showIntro && <Intro hideIntro={hideIntro}/>}
       {showMenu && <Menu navigate={navigate} /> }
     </div>
   )
