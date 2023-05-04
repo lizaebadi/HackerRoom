@@ -17,7 +17,7 @@ import Settings from '../settings/Settings';
 import Desk from '../desk/Desk';
 
 function App() {
-  const [showIntro, setShowIntro] = useState(true)
+  const [showIntro, setShowIntro] = useState(false)
 
   return (
     <Routes>
