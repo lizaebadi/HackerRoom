@@ -57,8 +57,12 @@ function Desk() {
       answers: ["True", "False"],
       correctAnswer: 0,
     },
-
-
+    {
+      question: "Determine the truth value of the following expression:",
+      codeImage: require("./question3.png"),
+      answers: ["True", "False"],
+      correctAnswer: 0,
+    },
   ]
 
   return (
