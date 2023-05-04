@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import './bookShelf.css'
 
 export default function Bookshelf() {
   const [page, setPage] = useState("helloWorld");
@@ -33,57 +34,59 @@ export default function Bookshelf() {
   });
 
   return (
-    <div>
+    <div className="all-pages">
       {page === "helloWorld" && (
     <div>
       <h2>Comments</h2>
       <p>Comments are used in Python to provide additional information about the code. The # character is used to start a comment that continues until the end of the line.</p>
-      <pre><code class="language-python"># Comment on a single line
-
+      <pre><code className="language-python"># Comment on a single line
+        <br></br>
       user = &quot;JDoe&quot; # Comment after code
       </code></pre>
+        <br></br>
       <h2>Arithmetic Operations</h2>
       <p>Arithmetic operations in Python include addition, subtraction, multiplication, division, modulus, and exponentiation. The primary arithmetic operators are:</p>
-      <ul>
-      <li>
-      <ul>
-      <li>for addition</li>
-      </ul>
-      </li>
-      <li>
-      <ul>
-      <li>for subtraction</li>
-      </ul>
-      </li>
-      <li>
-      <ul>
-      <li>for multiplication</li>
-      </ul>
-      </li>
-      <li>/ for division</li>
-      <li>% for modulus (returns the remainder)</li>
-      <li>** for exponentiation
+      <ul className="list">
+      <li>- + for addition</li>
+      <li>- - for subtraction</li>
+      <li>- * for multiplication</li>
+      <li>- / for division</li>
+      <li>- % for modulus (returns the remainder)</li>
+      <li>- ** for exponentiation
+        <br></br>
       Python also has the += operator that adds a value to an existing variable and assigns the new value back to the same variable.</li>
       </ul>
       <pre><code class="language-python"># Arithmetic operations
-
+      <br></br>
       result = 10 + 30
+        <br></br>
       result = 40 - 10
+        <br></br>
       result = 50 * 5
+        <br></br>
       result = 16 / 4
+        <br></br>
       result = 25 % 2
+        <br></br>
       result = 5 ** 3
 
+        <br></br>
       # Plus-Equal Operator
 
+        <br></br>
       counter = 0
+        <br></br>
       counter += 10
 
+        <br></br>
       # This is equivalent to
 
+        <br></br>
       counter = 0
+        <br></br>
       counter = counter + 10
       </code></pre>
+        <br></br>
       <h2>Variables</h2>
       <p>Variables in Python store data that will be used by the program and can be assigned using the equal sign =.</p>
       <pre><code class="language-python"># These are all valid variable names and assignment
