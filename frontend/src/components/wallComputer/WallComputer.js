@@ -90,7 +90,7 @@ function WallComputer() {
         <div className='wallComputerBox'>
           <h1 className='wallComputer-heading' data-cy="wallComputer-heading">Hello World</h1>
           <p id='wallComputer-body' data-cy="introduction">
-            
+            Are you prepared to put your knowledge to the test?
           </p>
           <p className='exit'>Press Esc to exit</p>
           <p className='continue'>Press SPACE to continue! ⚔️</p>
@@ -128,7 +128,7 @@ function WallComputer() {
           <div className='wallComputerBox'>
           <h1 className='wallComputer-heading' data-cy="outro-heading">Congratulations!</h1>
           <p id='outro-body' data-cy="outro-body">
-            Head over to the blue desk to explore Variables and Statements
+            Head over to the blue desk to explore Control Flow
           </p>
           <p className='exit'>Press Esc to exit</p>
           <p className='continue'>Press SPACE to continue! ⚔️</p>
