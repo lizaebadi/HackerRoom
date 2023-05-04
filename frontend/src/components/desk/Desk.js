@@ -63,6 +63,12 @@ function Desk() {
       answers: ["True", "False"],
       correctAnswer: 0,
     },
+    {
+      question: "Read the following code carefully. What will happen when the code is executed?",
+      codeImage: require("./question4.png"),
+      answers: ["\"x is equal to zero\" will print to the terminal", "There will be a SyntaxError", "\"x is greater than zero\" will print to the terminal", "\"x is equal to zero\" and \"x is greater than zero\" will print to the terminal"],
+      correctAnswer: 1,
+    },
   ]
 
   return (

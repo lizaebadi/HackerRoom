@@ -114,8 +114,16 @@
   text-align: center;
 }
 
+#question-box img {
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+
 #current-question {
-  font-size: 50px;
+  font-size: 40px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 20px;
@@ -200,4 +208,6 @@
 #code-image{
   text-align: center;
   padding-bottom: 20px;
+  width: 50%;
+  height: auto;
 }
