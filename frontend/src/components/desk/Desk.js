@@ -64,10 +64,22 @@ function Desk() {
       correctAnswer: 0,
     },
     {
+      question: "Determine the truth value of the following expression:",
+      codeImage: require("./question5.png"),
+      answers: ["True", "False"],
+      correctAnswer: 1,
+    },
+    {
       question: "Read the following code carefully. What will happen when the code is executed?",
       codeImage: require("./question4.png"),
       answers: ["\"x is equal to zero\" will print to the terminal", "There will be a SyntaxError", "\"x is greater than zero\" will print to the terminal", "\"x is equal to zero\" and \"x is greater than zero\" will print to the terminal"],
       correctAnswer: 1,
+    },
+    {
+      question: "Which of the following variables contains a Boolean value?",
+      codeImage: null,
+      answers: ["my_fun_variable = 2 + 9", "my_chill_variable = \"This is True.\"", "my_cool_variable = 7 + 8 != 13", "my_super_variable = \"True\" + \"False\""],
+      correctAnswer: 2,
     },
   ]
 
@@ -78,7 +90,7 @@ function Desk() {
         <div className='wallComputerBox'>
           <h1 className='wallComputer-heading'>Control Flow</h1>
           <p id='wallComputer-body' data-cy="introduction">
-            Example intro
+            Are you ready for the quiz?
           </p>
           <p className='exit'>Press Esc to exit</p>
           <p className='continue'>Press SPACE to continue! ⚔️</p>
@@ -116,7 +128,7 @@ function Desk() {
           <div className='wallComputerBox'>
           <h1 className='wallComputer-heading' data-cy="outro-heading">Congratulations!</h1>
           <p id='outro-body' data-cy="outro-body">
-            Head over to the blue desk to explore Variables and Statements
+            Check out the grey server and discover the power of Lists
           </p>
           <p className='exit'>Press Esc to exit</p>
           <p className='continue'>Press SPACE to continue! ⚔️</p>
