@@ -54,17 +54,17 @@ const Settings = ({ navigate}) => {
               
 
                 <div id='account-page-menu-main' className={optionSelected === "Main" ? "show-menu" : "hide-menu"}>
-                  <h2 className="menu-title">My information</h2>
+                  <h2 className="menu-title">Information</h2>
                   <div>
-                    <p className="info-details-title">My current email:</p>
+                    <p className="info-details-title">Email:</p>
                     <p className="info-details-value">{userData.email}</p>
                   </div>
                   <div>
-                    <p className="info-details-title">My current username:</p>
+                    <p className="info-details-title">Username:</p>
                     <p className="info-details-value">{userData.username}</p>
                   </div>
                   <div>
-                    <p className="info-details-title">My current password:</p>
+                    <p className="info-details-title">Password:</p>
                     <p className="info-details-value">********</p>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ const Settings = ({ navigate}) => {
                 <div id='account-page-menu-email' className={optionSelected === "Email" ? "show-menu" : "hide-menu"}>
                   <h2 className="menu-title">Email</h2>
                   <div>
-                    <p className="info-details-title">My current email:</p>
+                    <p className="info-details-title">Current email:</p>
                     <p className="info-details-value">{userData.email}</p>
                   </div>
                   <EmailForm updateUser={updateUser} />
@@ -81,7 +81,7 @@ const Settings = ({ navigate}) => {
                 <div id='account-page-menu-username' className={optionSelected === "Username" ? "show-menu" : "hide-menu"}>
                   <h2 className="menu-title">Username</h2>
                   <div>
-                    <p className="info-details-title">My current username:</p>
+                    <p className="info-details-title">Current username:</p>
                     <p className="info-details-value">{userData.username}</p>
                   </div>
                   <UsernameForm updateUser={updateUser} />
@@ -90,7 +90,7 @@ const Settings = ({ navigate}) => {
                 <div id='account-page-menu-password' className={optionSelected === "Password" ? "show-menu" : "hide-menu"}>
                   <h2 className="menu-title">Password</h2>
                   <div>
-                    <p className="info-details-title">My current password:</p>
+                    <p className="info-details-title">Current password:</p>
                     <p className="info-details-value">********</p>
                   </div>
                   <PasswordForm />
