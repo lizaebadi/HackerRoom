@@ -58,7 +58,9 @@ const MainGame = ({ navigate }) => {
         if (event.key === 'Escape') {
           setShowMenu(!showMenu);
         } else if (event.code === "Space" && wallComputer.collision(hero)) {
-          navigate('/wallComputer');;
+          navigate('/wallComputer');
+        } else if (event.code === "Space" && wallServer.collision(hero)) {
+          navigate('/wallServer');
         }
       }
 
@@ -77,7 +79,7 @@ const MainGame = ({ navigate }) => {
       </div>
         <img src="server-big.png" alt="server-big" id="server-big"/>
       <img src="$MorganB.png" alt="hero" id="hero"/>
-    <img src="wall-computer.png" alt="wall-computer" id="wall-computer"/>
+      <img src="wall-computer.png" alt="wall-computer" id="wall-computer"/>
       <img src="wall-computer2.png" alt="wall-computer2" id="wall-computer2"/>
       <img src="desk.png" alt="desk" id="desk"/>
       <img src="table.png" alt="table" id="table"/>
