@@ -6,10 +6,9 @@ import './MainGame.css';
 import Menu from '../menu/Menu.js';
 import Intro from '../intro/Intro.js';
 
-const MainGame = ({ navigate }) => {
+const MainGame = ({ navigate, showIntro, setShowIntro }) => {
   const canvasRef = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
-  const [showIntro, setShowIntro] = useState(true)
   const hideIntro = () => {
     setShowIntro(false);
   };
