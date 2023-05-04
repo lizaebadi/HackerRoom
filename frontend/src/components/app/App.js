@@ -12,6 +12,7 @@ import WallComputer from '../wallComputer/WallComputer'
 import WallServer from '../wallServerSmall/wallServer';
 import PrivateRoute from '../token/PrivateRoute';
 import Settings from '../settings/Settings';
+import Desk from '../desk/Desk';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Route path='/login'  element={<LogInForm  navigate={ useNavigate() }/>}/>
       <Route path='/wallComputer' element={<PrivateRoute><WallComputer navigate={useNavigate()} /></PrivateRoute>} />
       <Route path='/wallServer' element={<PrivateRoute><WallServer navigate={useNavigate()} /></PrivateRoute>} />
+      <Route path='/desk' element={<PrivateRoute><Desk navigate={useNavigate()} /></PrivateRoute>} />
     </Routes>
   );
 }

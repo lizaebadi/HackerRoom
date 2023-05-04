@@ -90,10 +90,7 @@ function WallComputer() {
         <div className='wallComputerBox'>
           <h1 className='wallComputer-heading' data-cy="wallComputer-heading">Hello World</h1>
           <p id='wallComputer-body' data-cy="introduction">
-            To start, we'll be going back to the basics with the classic 'Hello,
-            World!' program. But this time, we'll be introducing a whole new
-            world - one that the Fakers are determined to exploit. It's up to
-            you to stop them, one line of code at a time.
+            
           </p>
           <p className='exit'>Press Esc to exit</p>
           <p className='continue'>Press SPACE to continue! ⚔️</p>
@@ -121,7 +118,7 @@ function WallComputer() {
               </div>
             ))}
           </div>
-          <button onClick={submitAnswer}>Submit</button>
+          <button className="wallCompButton" onClick={submitAnswer}>Submit</button>
           <p className="exit">Press Esc to exit</p>
           {message && <p className="message">{message}</p>}
         </div>
