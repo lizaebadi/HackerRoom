@@ -121,7 +121,7 @@ function WallComputer() {
               </div>
             ))}
           </div>
-          <button onClick={submitAnswer}>Submit</button>
+          <button className="wallCompButton" onClick={submitAnswer}>Submit</button>
           <p className="exit">Press Esc to exit</p>
           {message && <p className="message">{message}</p>}
         </div>
