@@ -33,7 +33,7 @@ function App() {
         </PrivateRoute>
       }/>
       <Route path='/signup'  element={<SignUpForm navigate={ useNavigate() } />}/>
-      <Route path='/login'  element={<LogInForm  navigate={ useNavigate() } showIntro={showIntro} setShowIntro={setShowIntro}/>}/>
+      <Route path='/login'  element={<LogInForm  navigate={ useNavigate() } setShowIntro={setShowIntro}/>}/>
       <Route path='/wallComputer' element={<PrivateRoute><WallComputer navigate={useNavigate()} /></PrivateRoute>} />
       <Route path='/wallServer' element={<PrivateRoute><WallServer navigate={useNavigate()} /></PrivateRoute>} />
       <Route path='/desk' element={<PrivateRoute><Desk navigate={useNavigate()} /></PrivateRoute>} />

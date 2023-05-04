@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LogInForm.css';
 
-const LogInForm = ({ navigate, showIntro, setShowIntro }) => {
+const LogInForm = ({ navigate, setShowIntro }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
