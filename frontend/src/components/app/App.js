@@ -11,6 +11,7 @@ import LogInForm from '../login/LogInForm';
 import MainGame from '../game/MainGame';
 import WallComputer from '../wallComputer/WallComputer'
 import WallServer from '../wallServerSmall/wallServer';
+import Bookshelf from '../bookshelf/bookShelf.js'
 import PrivateRoute from '../token/PrivateRoute';
 import Settings from '../settings/Settings';
 import Desk from '../desk/Desk';
@@ -36,6 +37,7 @@ function App() {
       <Route path='/wallComputer' element={<PrivateRoute><WallComputer navigate={useNavigate()} /></PrivateRoute>} />
       <Route path='/wallServer' element={<PrivateRoute><WallServer navigate={useNavigate()} /></PrivateRoute>} />
       <Route path='/desk' element={<PrivateRoute><Desk navigate={useNavigate()} /></PrivateRoute>} />
+      <Route path='/bookShelf' element={<PrivateRoute><Bookshelf navigate={useNavigate()} /></PrivateRoute>} />
     </Routes>
   );
 }

@@ -13,8 +13,13 @@
   height: 100%;
 }
 
-body {
+.background {
   background-image: url('../../../public/img/bluecomputerscreen.gif');
+  background-size: cover;
+  
+  height: 100vh;
+  padding:0;
+  margin:0;
 }
 
 .editor-title {

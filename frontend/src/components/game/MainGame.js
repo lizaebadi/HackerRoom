@@ -66,6 +66,8 @@ const MainGame = ({ navigate, showIntro, setShowIntro }) => {
           navigate('/wallServer');
         } else if (event.code === "Space" && desk.collision(hero)) {
           navigate('/desk');
+        } else if (event.code === "Space" && bookshelf.collision(hero)) {
+          navigate('/bookShelf');
         }
       }
 

@@ -32,7 +32,7 @@ function CodeEditor() {
   }
   
   return (
-    <div>
+    <div className="background">
       <h2 className="header">Practice Room</h2>
     <div className="parent">
       <div className="top-pane">
