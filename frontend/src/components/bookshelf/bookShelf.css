@@ -1,6 +1,49 @@
-.all-pages {
-
+.outer {
+  background: linear-gradient(to left, #141414, #333 10%, #0800ff 5%, #232222 75%);
+  
+}
+.hello {
+  color: white;
   overflow-wrap: break-word;
   font-size: medium;
-  text-align: center;
+  margin-left: 20px;
+  width: 800px;
 }
+
+.control {
+  color: white;
+  overflow-wrap: break-word;
+  font-size: medium;
+  margin-left: 20px;
+  width: 800px;
+
+}
+
+.list {
+  color: white;
+  overflow-wrap: break-word;
+  font-size: medium;
+  margin-left: 20px;
+  width: 800px;
+
+}
+
+#code {
+  width: 480px;
+
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+
+}
+
+.loop {
+  color: white;
+  overflow-wrap: break-word;
+  font-size: medium;
+  margin-left: 20px;
+  width: 800px;
+
+}
+
+
