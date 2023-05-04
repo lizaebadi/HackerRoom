@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./WallComputer.css";
-import codeImage from './question1.png';
 
 
 function WallComputer() {
