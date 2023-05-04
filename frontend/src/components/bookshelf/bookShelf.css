@@ -1,6 +1,14 @@
 .outer {
   background-image: url('../../../public/img/bluecomputerscreen.gif');
-  background-repeat: repeat;
+  background-size: cover;
+  height: 100vh;
+  padding:0;
+  margin:0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .hello {
   color: white;

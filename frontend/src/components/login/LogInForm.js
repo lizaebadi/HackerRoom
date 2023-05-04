@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LogInForm.css';
 
-const LogInForm = ({ navigate }) => {
+const LogInForm = ({ navigate, setShowIntro }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -35,6 +35,7 @@ const LogInForm = ({ navigate }) => {
         let data = await response.json()
         window.localStorage.setItem("token", data.token)
         window.localStorage.setItem("user", JSON.stringify(data.user))
+        setShowIntro(true)
         navigate('/game');
     }
   }
