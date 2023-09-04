@@ -15,27 +15,33 @@ HackerRoom is built using the following technologies:
 To get started with HackerRoom, follow these steps:
 
 1. Clone the repository
-``bash
+```bash
 git clone
 ```
-2. Navigate to the repository and run the following:
+2. Install and start MongoDB:
+```bash
+brew tap mongodb/brew
+brew install mongodb-community@5.0
+brew services start mongodb-community@5.0
+```
+3. Navigate to the repository and run the following:
 ```bash
 cd frontend
 npm install
 cd ../api
 npm install
 ```
-3. Start the development server by running:
+4. Start the development server by running:
 ```bash
 cd api
 JWT_SECRET=SUPER_SECRET npm start
 ```
-*In another terminal*
+  *In another terminal*
 ```bash
 cd frontend
 npm start
 ```
-4. Open http://localhost:3000 to view the game in your browser.
+5. Open http://localhost:3000 to view the game in your browser.
 
 ## Gameplay
 In HackerRoom, you control a character that can move around the game using the arrow keys. You can interact with the objects in the room by moving to them and pressing the spacebar.
